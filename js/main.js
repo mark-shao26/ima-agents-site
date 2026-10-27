@@ -60,7 +60,7 @@
 
   /* 滚动入场动画 */
   var revealEls = document.querySelectorAll(
-    ".card, .agent, .shot, .faq__item, .contact__item, .hero__stats li, .panel, .guide__boundary"
+    ".card, .agent, .faq__item, .hero__stats li, .panel, .step, .answer-flow, .kb-card, .contact__single, .section__title"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -77,6 +77,84 @@
     revealEls.forEach(function (el) { revealObserver.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* Agent 长条行手风琴展开 */
+  document.querySelectorAll(".agent__row").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var agent = btn.closest(".agent");
+      var open = agent.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+    });
+  });
+
+  /* Hero 标题逐字浮现（语言切换后重建） */
+  function splitHeroTitle() {
+    if (reducedMotion) return;
+    var h1 = document.querySelector(".hero__title");
+    if (!h1) return;
+
+    var count = 0;
+    function wrapChars(node) {
+      var frag = document.createDocumentFragment();
+      Array.prototype.forEach.call(node.childNodes, function (child) {
+        if (child.nodeType === 3) {
+          var text = child.textContent;
+          for (var i = 0; i < text.length; i++) {
+            var ch = text[i];
+            if (ch === " " || ch === "\n") {
+              frag.appendChild(document.createTextNode(ch));
+            } else {
+              var sp = document.createElement("span");
+              sp.className = "char";
+              sp.style.setProperty("--i", String(count++));
+              sp.textContent = ch;
+              frag.appendChild(sp);
+            }
+          }
+        } else if (child.nodeType === 1) {
+          var clone = child.cloneNode(false);
+          clone.appendChild(wrapChars(child));
+          frag.appendChild(clone);
+        }
+      });
+      return frag;
+    }
+
+    var fresh = h1.cloneNode(false);
+    fresh.appendChild(wrapChars(h1));
+    h1.parentNode.replaceChild(fresh, h1);
+  }
+  splitHeroTitle();
+  document.addEventListener("site:langchange", splitHeroTitle);
+
+  /* 鼠标跟随光晕（lerp 平滑） */
+  var glow = document.getElementById("cursorGlow");
+  if (glow && window.matchMedia("(pointer: fine)").matches) {
+    var tx = -999, ty = -999, cx = -999, cy = -999;
+    var shown = false;
+
+    window.addEventListener("mousemove", function (e) {
+      tx = e.clientX;
+      ty = e.clientY;
+      if (!shown) {
+        shown = true;
+        glow.classList.add("is-on");
+        cx = tx; cy = ty;
+      }
+    });
+
+    (function follow() {
+      cx += (tx - cx) * (reducedMotion ? 1 : 0.12);
+      cy += (ty - cy) * (reducedMotion ? 1 : 0.12);
+      glow.style.transform = "translate(" + (cx - 220) + "px," + (cy - 220) + "px)";
+      requestAnimationFrame(follow);
+    })();
+
+    document.addEventListener("mouseleave", function () {
+      glow.classList.remove("is-on");
+      shown = false;
+    });
   }
 
   /* 页脚年份自动更新 */

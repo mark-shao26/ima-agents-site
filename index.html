@@ -6,6 +6,14 @@
   <meta name="description" content="邵奇 AICFO 及其行业衍生智能体矩阵 —— 基于 ima 平台的财税合规 AI Agent 展示" />
   <title>邵奇 AICFO 智能体矩阵 | ima Agents</title>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- 网页字体：思源黑体 + Inter（jsDelivr 按需分包，加载失败自动回退系统字体） -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/600.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css" />
 </head>
 <body>
 
@@ -13,7 +21,6 @@
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="主导航">
       <a class="nav__brand" href="#top">
-        <span class="nav__logo" aria-hidden="true">财</span>
         <span class="nav__title">邵奇 AICFO · Agents</span>
       </a>
       <div class="nav__right">
@@ -46,22 +53,18 @@
       <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
       <div class="container hero__inner">
-        <p class="hero__eyebrow" data-i18n="hero.eyebrow">基于腾讯 ima 平台 · 财税合规 AI Agent 矩阵</p>
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">基于 ima·copilot 的财、税、法、合规 AI Agent 矩阵</p>
         <h1 class="hero__title" data-i18n-html="hero.title">10 年 CFO 实战经验，<br />沉淀为<span class="accent">可对话的智能体</span></h1>
-        <p class="hero__lead" data-i18n="hero.lead">
-          以「邵奇｜财务模型矩阵｜AI CFO」为统一能力底座，衍生出电商、餐饮、民办学校、银行内控、内控诊断等行业智能体，
-          并推出法语版 Matrice Modèles Fin. AICFO——让专业财税判断随问随得。
-        </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#agents" data-i18n="hero.btn1">浏览全部智能体</a>
           <a class="btn btn--ghost" href="#demo" data-i18n="hero.btn2">查看演示</a>
         </div>
 
         <ul class="hero__stats" aria-label="项目亮点数据">
-          <li><strong data-i18n="hero.s1n">10 年</strong><span data-i18n="hero.s1t">财务管理与 CFO 决策经验</span></li>
-          <li><strong data-i18n="hero.s2n">7 个</strong><span data-i18n="hero.s2t">行业 / 场景智能体（含法语版）</span></li>
-          <li><strong data-i18n="hero.s3n">120 题</strong><span data-i18n="hero.s3t">多模型对比验证题库</span></li>
-          <li><strong data-i18n="hero.s4n">5500+</strong><span data-i18n="hero.s4t">已发布知识库条目沉淀</span></li>
+          <li><strong data-i18n="hero.s1n">10 年</strong><span data-i18n="hero.s1t">CFO 实战经验</span></li>
+          <li><strong data-i18n="hero.s2n">7 个</strong><span data-i18n="hero.s2t">行业智能体（含法语版）</span></li>
+          <li><strong data-i18n="hero.s3n">8 个</strong><span data-i18n="hero.s3t">主流大模型 benchmark</span></li>
+          <li><strong data-i18n="hero.s4n">5500+</strong><span data-i18n="hero.s4t">知识条目沉淀</span></li>
         </ul>
       </div>
     </section>
@@ -70,22 +73,18 @@
     <section class="section" id="highlights">
       <div class="container">
         <h2 class="section__title" data-i18n="hl.title">为什么是这套 Agent 矩阵</h2>
-        <p class="section__sub" data-i18n="hl.sub">一页一个结论：专业底座 + 行业衍生 + 持续验证。</p>
         <div class="grid grid--3">
           <article class="card">
-            <div class="card__icon" aria-hidden="true">◆</div>
             <h3 data-i18n="hl1.t">统一专业底座</h3>
-            <p data-i18n="hl1.p">所有智能体共享「邵奇 AICFO」财税知识底座，保证专业口径一致，避免通用大模型的漂移与幻觉。</p>
+            <p data-i18n="hl1.p">所有智能体共享同一套财税知识底座，口径一致，避免通用模型的漂移与幻觉。</p>
           </article>
           <article class="card">
-            <div class="card__icon" aria-hidden="true">▣</div>
-            <h3 data-i18n="hl2.t">行业纵深衍生</h3>
-            <p data-i18n="hl2.p">针对电商、餐饮、民办学校、银行等行业的特有科目、报表与合规要求做定制，而非泛泛的通用问答。</p>
+            <h3 data-i18n="hl2.t">行业纵深定制</h3>
+            <p data-i18n="hl2.p">按电商、餐饮、民办学校、银行的科目与报表定制，不做泛泛问答。</p>
           </article>
           <article class="card">
-            <div class="card__icon" aria-hidden="true">◎</div>
             <h3 data-i18n="hl3.t">多模型交叉验证</h3>
-            <p data-i18n="hl3.p">以 120 道验证题（含挖坑题）与 GLM、DeepSeek、豆包、ChatGPT、Grok、Gemini 等 8 个模型横向对比，持续校准。</p>
+            <p data-i18n="hl3.p">同题 benchmark 横向对比主流大模型，持续校准专业口径。</p>
           </article>
         </div>
       </div>
@@ -95,195 +94,251 @@
     <section class="section section--alt" id="agents">
       <div class="container">
         <h2 class="section__title" data-i18n="agents.title">智能体一览</h2>
-        <p class="section__sub" data-i18n="agents.sub">点击各卡片中的入口链接，即可跳转至 ima 平台直接使用。</p>
+        <p class="section__sub" data-i18n="agents.sub">点击任意一行展开详情，入口链接在详情内。</p>
 
         <div class="agents">
 
           <!-- 主底座 -->
-          <article class="agent" id="agent-aicfo">
-            <div class="agent__head">
+          <article class="agent open" id="agent-aicfo">
+            <button class="agent__row" type="button" aria-expanded="true" aria-controls="detail-aicfo">
               <span class="agent__badge" data-i18n="a1.badge">能力底座</span>
-              <h3>邵奇｜财务模型矩阵｜AI CFO</h3>
-              <p class="agent__tagline" data-i18n="a1.tag">把 10 年 CFO 判断经验变成可调用的 AI 思维 · 低幻觉 · 可提问或上传报表 · DCF / ROIC / WACC / NPV / 敏感分析 / 估值 / 风险监控 / 盈亏平衡</p>
-              <p class="agent__meta" data-i18n="a1.meta">397 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="a1.can">✔ 能做</h4>
-                <ul>
-                  <li data-i18n-html="a1.can1"><strong>算钱</strong>：现金流、投资回报、估值、预算偏差</li>
-                  <li data-i18n-html="a1.can2"><strong>判风险</strong>：盈利质量、偿债能力、断流预警</li>
-                  <li data-i18n-html="a1.can3"><strong>给建议</strong>：投不投、怎么融资、下一步怎么办</li>
-                </ul>
-                <h4 data-i18n="a1.cant">✘ 不做</h4>
-                <ul>
-                  <li data-i18n="a1.cant1">不预测股价、不荐股</li>
-                  <li data-i18n="a1.cant2">不替你签字、不替代专业意见</li>
-                  <li data-i18n="a1.cant3">不编数据——缺数据它会向你要</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a1.scenep">企业主 / 财务负责人日常财税咨询、重大决策前的合规校验、财务团队能力补充。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p data-i18n="a1.usep">打开 ima.copilot → 选择知识库「AI CFO」→ 直接输入问题，或上传报表（Excel / PDF 均可）。</p>
-                <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=68da313d47e2ca27311db50e945efd41f5797fd51de184e5463a550589b2347f" target="_blank" rel="noopener" data-i18n="a1.link">在 ima 中打开「邵奇｜财务模型矩阵｜AI CFO」→</a></p>
+              <span class="agent__main">
+                <span class="agent__name">邵奇｜财务模型矩阵｜AI CFO</span>
+                <span class="agent__brief" data-i18n="a1.brief">算钱 · 判风险 · 给建议</span>
+              </span>
+              <span class="agent__meta" data-i18n="a1.meta">沉淀 397 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-aicfo">
+              <div class="agent__inner">
+                <p class="agent__tagline" data-i18n="a1.tag">把 10 年 CFO 判断经验变成可调用的 AI 思维 · 低幻觉 · 可提问或上传报表 · DCF / ROIC / WACC / NPV / 敏感分析 / 估值 / 风险监控 / 盈亏平衡</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="a1.can">✔ 能做</h4>
+                    <ul>
+                      <li data-i18n-html="a1.can1"><strong>算钱</strong>：现金流、投资回报、估值、预算偏差</li>
+                      <li data-i18n-html="a1.can2"><strong>判风险</strong>：盈利质量、偿债能力、断流预警</li>
+                      <li data-i18n-html="a1.can3"><strong>给建议</strong>：投不投、怎么融资、下一步怎么办</li>
+                    </ul>
+                    <h4 data-i18n="a1.cant">✘ 不做</h4>
+                    <ul>
+                      <li data-i18n="a1.cant1">不预测股价、不荐股</li>
+                      <li data-i18n="a1.cant2">不替你签字、不替代专业意见</li>
+                      <li data-i18n="a1.cant3">不编数据——缺数据它会向你要</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a1.scenep">企业主 / 财务负责人日常财税咨询、重大决策前的合规校验、财务团队能力补充。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p data-i18n="a1.usep">打开 ima.copilot → 选择知识库「AI CFO」→ 直接输入问题，或上传报表（Excel / PDF 均可）。</p>
+                    <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=68da313d47e2ca27311db50e945efd41f5797fd51de184e5463a550589b2347f" target="_blank" rel="noopener" data-i18n="a1.link">在 ima 中打开「邵奇｜财务模型矩阵｜AI CFO」→</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- 电商 -->
           <article class="agent" id="agent-ecom">
-            <div class="agent__head">
+            <button class="agent__row" type="button" aria-expanded="false" aria-controls="detail-ecom">
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
-              <h3>电商 AI 智能体（财、税、法务）</h3>
-              <p class="agent__tagline" data-i18n="a2.tag">算清账 · 穿透业务 · 追溯运营 · 财法合判——放大你的判断力</p>
-              <p class="agent__meta" data-i18n="a2.meta">191 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="col.features">功能与核心能力</h4>
-                <ul>
-                  <li data-i18n="a2.li1">平台结算单与账务核对逻辑</li>
-                  <li data-i18n="a2.li2">刷单、退款、佣金的财税处理</li>
-                  <li data-i18n="a2.li3">电商行业涉税风险点识别</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a2.scenep">电商企业财务、多平台店铺经营者、代账机构。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=1851b12407be4f660ced517e56dfd5a7ed865da90a293c2a3dc23b731852195e" target="_blank" rel="noopener" data-i18n="a2.link">在 ima 中打开：电商 AI 智能体（财、税、法务）→</a></p>
+              <span class="agent__main">
+                <span class="agent__name">电商 AI 智能体（财、税、法务）</span>
+                <span class="agent__brief" data-i18n="a2.brief">算账 · 穿透 · 合判</span>
+              </span>
+              <span class="agent__meta" data-i18n="a2.meta">沉淀 191 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-ecom">
+              <div class="agent__inner">
+                <p class="agent__tagline" data-i18n="a2.tag">算清账 · 穿透业务 · 追溯运营 · 财法合判——放大你的判断力</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="col.features">功能与核心能力</h4>
+                    <ul>
+                      <li data-i18n="a2.li1">平台结算单与账务核对逻辑</li>
+                      <li data-i18n="a2.li2">刷单、退款、佣金的财税处理</li>
+                      <li data-i18n="a2.li3">电商行业涉税风险点识别</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a2.scenep">电商企业财务、多平台店铺经营者、代账机构。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=1851b12407be4f660ced517e56dfd5a7ed865da90a293c2a3dc23b731852195e" target="_blank" rel="noopener" data-i18n="a2.link">在 ima 中打开：电商 AI 智能体（财、税、法务）→</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- 餐饮 -->
           <article class="agent" id="agent-restaurant">
-            <div class="agent__head">
+            <button class="agent__row" type="button" aria-expanded="false" aria-controls="detail-restaurant">
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
-              <h3>餐饮老板 AI 智能体（财+税+法）</h3>
-              <p class="agent__tagline" data-i18n="a3.tag">财务、税务、法务三位一体，餐饮老板的 AI 军师</p>
-              <p class="agent__meta" data-i18n="a3.meta">362 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="col.features">功能与核心能力</h4>
-                <ul>
-                  <li data-i18n="a3.li1">单店 / 连锁门店损益分析</li>
-                  <li data-i18n="a3.li2">食材成本率、人效等关键指标解读</li>
-                  <li data-i18n="a3.li3">餐饮行业常见税务问题处理</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a3.scenep">餐饮连锁企业、单店经营者、餐饮财务主管。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=6937ec10e7913693fdd705d00bb3c58ffd8056a50589a7c5487725e14a4d27c3" target="_blank" rel="noopener" data-i18n="a3.link">在 ima 中打开：餐饮老板 AI 智能体（财+税+法）→</a></p>
+              <span class="agent__main">
+                <span class="agent__name">餐饮老板 AI 智能体（财+税+法）</span>
+                <span class="agent__brief" data-i18n="a3.brief">财税法一体军师</span>
+              </span>
+              <span class="agent__meta" data-i18n="a3.meta">沉淀 362 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-restaurant">
+              <div class="agent__inner">
+                <p class="agent__tagline" data-i18n="a3.tag">财务、税务、法务三位一体，餐饮老板的 AI 军师</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="col.features">功能与核心能力</h4>
+                    <ul>
+                      <li data-i18n="a3.li1">单店 / 连锁门店损益分析</li>
+                      <li data-i18n="a3.li2">食材成本率、人效等关键指标解读</li>
+                      <li data-i18n="a3.li3">餐饮行业常见税务问题处理</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a3.scenep">餐饮连锁企业、单店经营者、餐饮财务主管。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=6937ec10e7913693fdd705d00bb3c58ffd8056a50589a7c5487725e14a4d27c3" target="_blank" rel="noopener" data-i18n="a3.link">在 ima 中打开：餐饮老板 AI 智能体（财+税+法）→</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- 民办学校 -->
           <article class="agent" id="agent-school">
-            <div class="agent__head">
+            <button class="agent__row" type="button" aria-expanded="false" aria-controls="detail-school">
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
-              <h3>民办学校 AI 智能体</h3>
-              <p class="agent__tagline" data-i18n="a4.tag">懂政策、会算账、能分析——民办学校自己的智慧大脑</p>
-              <p class="agent__meta" data-i18n="a4.meta">408 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="col.features">功能与核心能力</h4>
-                <ul>
-                  <li data-i18n="a4.li1">民办学校会计制度与科目适配</li>
-                  <li data-i18n="a4.li2">学费收入、生均成本等特有分析报表</li>
-                  <li data-i18n="a4.li3">民办教育合规要点提示</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a4.scenep">K12 民办学校、教育集团财务负责人、举办者。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=d9c5086fe7550b9a29688eddf5c73f590ca27161ff4ef15f794e3038d392ac56" target="_blank" rel="noopener" data-i18n="a4.link">在 ima 中打开：民办学校 AI 智能体 →</a></p>
+              <span class="agent__main">
+                <span class="agent__name">民办学校 AI 智能体</span>
+                <span class="agent__brief" data-i18n="a4.brief">学校的智慧大脑</span>
+              </span>
+              <span class="agent__meta" data-i18n="a4.meta">沉淀 408 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-school">
+              <div class="agent__inner">
+                <p class="agent__tagline" data-i18n="a4.tag">懂政策、会算账、能分析——民办学校自己的智慧大脑</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="col.features">功能与核心能力</h4>
+                    <ul>
+                      <li data-i18n="a4.li1">民办学校会计制度与科目适配</li>
+                      <li data-i18n="a4.li2">学费收入、生均成本等特有分析报表</li>
+                      <li data-i18n="a4.li3">民办教育合规要点提示</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a4.scenep">K12 民办学校、教育集团财务负责人、举办者。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=d9c5086fe7550b9a29688eddf5c73f590ca27161ff4ef15f794e3038d392ac56" target="_blank" rel="noopener" data-i18n="a4.link">在 ima 中打开：民办学校 AI 智能体 →</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- 银行内控 -->
           <article class="agent" id="agent-bank">
-            <div class="agent__head">
+            <button class="agent__row" type="button" aria-expanded="false" aria-controls="detail-bank">
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
-              <h3>银行体系内控诊断智能体</h3>
-              <p class="agent__tagline" data-i18n="a5.tag">银行业内控体系诊断 · 风险点排查</p>
-              <p class="agent__meta" data-i18n="a5.meta">68 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="col.features">功能与核心能力</h4>
-                <ul>
-                  <li data-i18n="a5.li1">银行内控框架梳理与差距分析</li>
-                  <li data-i18n="a5.li2">关键业务条线风险点识别</li>
-                  <li data-i18n="a5.li3">整改建议与制度完善方向</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a5.scenep">银行内控 / 合规部门、审计机构、咨询顾问。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=ac4d0f06150f04d589e2e68ad7d4bb01616823cee1d7d7bae14ac9f6e4b2d582" target="_blank" rel="noopener" data-i18n="a5.link">在 ima 中打开：银行体系内控诊断智能体 →</a></p>
+              <span class="agent__main">
+                <span class="agent__name">银行体系内控诊断智能体</span>
+                <span class="agent__brief" data-i18n="a5.brief">内控体检</span>
+              </span>
+              <span class="agent__meta" data-i18n="a5.meta">沉淀 68 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-bank">
+              <div class="agent__inner">
+                <p class="agent__tagline" data-i18n="a5.tag">银行业内控体系诊断 · 风险点排查</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="col.features">功能与核心能力</h4>
+                    <ul>
+                      <li data-i18n="a5.li1">银行内控框架梳理与差距分析</li>
+                      <li data-i18n="a5.li2">关键业务条线风险点识别</li>
+                      <li data-i18n="a5.li3">整改建议与制度完善方向</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a5.scenep">银行内控 / 合规部门、审计机构、咨询顾问。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=ac4d0f06150f04d589e2e68ad7d4bb01616823cee1d7d7bae14ac9f6e4b2d582" target="_blank" rel="noopener" data-i18n="a5.link">在 ima 中打开：银行体系内控诊断智能体 →</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- 内控风险智能诊断 -->
           <article class="agent" id="agent-risk">
-            <div class="agent__head">
+            <button class="agent__row" type="button" aria-expanded="false" aria-controls="detail-risk">
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
-              <h3>AI 内控诊断 ©灯塔计划</h3>
-              <p class="agent__tagline" data-i18n="a6.tag">证据分级 · 风险溯源 · 双重核验——把十年财务判断力，变成 AI 说话前必须先自证的规矩</p>
-              <p class="agent__meta" data-i18n="a6.meta">212 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="col.features">功能与核心能力</h4>
-                <ul>
-                  <li data-i18n="a6.li1">按业务循环扫描内控薄弱环节</li>
-                  <li data-i18n="a6.li2">风险分级与整改优先级建议</li>
-                  <li data-i18n="a6.li3">输出结构化诊断结论</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a6.scenep">拟上市 / 拟融资企业、集团内审部门、外部咨询机构。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p data-i18n="a6.linkp">分享链接即将上线，可先通过底部联系方式获取。</p>
+              <span class="agent__main">
+                <span class="agent__name">AI 内控诊断 ©灯塔计划</span>
+                <span class="agent__brief" data-i18n="a6.brief">证据分级 · 双重核验</span>
+              </span>
+              <span class="agent__meta" data-i18n="a6.meta">沉淀 212 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-risk">
+              <div class="agent__inner">
+                <p class="agent__tagline" data-i18n="a6.tag">证据分级 · 风险溯源 · 双重核验——把十年财务判断力，变成 AI 说话前必须先自证的规矩</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="col.features">功能与核心能力</h4>
+                    <ul>
+                      <li data-i18n="a6.li1">按业务循环扫描内控薄弱环节</li>
+                      <li data-i18n="a6.li2">风险分级与整改优先级建议</li>
+                      <li data-i18n="a6.li3">输出结构化诊断结论</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a6.scenep">拟上市 / 拟融资企业、集团内审部门、外部咨询机构。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p data-i18n="a6.linkp">分享链接即将上线，可先通过底部联系方式获取。</p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- 法语版 -->
           <article class="agent" id="agent-french">
-            <div class="agent__head">
+            <button class="agent__row" type="button" aria-expanded="false" aria-controls="detail-french">
               <span class="agent__badge agent__badge--fr">Version française</span>
-              <h3>Matrice Modèles Fin. AICFO</h3>
-              <p class="agent__tagline" lang="fr">Transformer dix ans d'expérience de jugement en tant que Directeur Financier en un raisonnement IA invocable</p>
-              <p class="agent__meta" data-i18n="a7.meta">405 条知识沉淀</p>
-            </div>
-            <div class="agent__body">
-              <div class="agent__col">
-                <h4 data-i18n="col.features">功能与核心能力</h4>
-                <ul>
-                  <li data-i18n="a7.li1">AICFO 能力底座的法语版本，面向法语区企业与投资者</li>
-                  <li data-i18n="a7.li2">同一套财务判断框架：估值、现金流、风险识别、决策建议</li>
-                  <li data-i18n="a7.li3">跨语言一致的低幻觉问答体验</li>
-                </ul>
-              </div>
-              <div class="agent__col">
-                <h4 data-i18n="col.scene">适用场景</h4>
-                <p data-i18n="a7.scenep">法语区（欧洲 / 非洲）企业主与财务负责人、跨境投资沟通、中法双语财务团队。</p>
-                <h4 data-i18n="col.use">使用方式</h4>
-                <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=ce99c2f499bdc40d107183ad1f3cbaa0c8d35e891d1864fe6836d16f8f536bba" target="_blank" rel="noopener" data-i18n="a7.link">在 ima 中打开：Matrice Modèles Fin. AICFO →</a></p>
+              <span class="agent__main">
+                <span class="agent__name">Matrice Modèles Fin. AICFO</span>
+                <span class="agent__brief" data-i18n="a7.brief">法语区版本</span>
+              </span>
+              <span class="agent__meta" data-i18n="a7.meta">沉淀 405 条知识</span>
+              <span class="agent__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="agent__detail" id="detail-french">
+              <div class="agent__inner">
+                <p class="agent__tagline" lang="fr">Transformer dix ans d'expérience de jugement en tant que Directeur Financier en un raisonnement IA invocable</p>
+                <div class="agent__body">
+                  <div class="agent__col">
+                    <h4 data-i18n="col.features">功能与核心能力</h4>
+                    <ul>
+                      <li data-i18n="a7.li1">AICFO 能力底座的法语版本，面向法语区企业与投资者</li>
+                      <li data-i18n="a7.li2">同一套财务判断框架：估值、现金流、风险识别、决策建议</li>
+                      <li data-i18n="a7.li3">跨语言一致的低幻觉问答体验</li>
+                    </ul>
+                  </div>
+                  <div class="agent__col">
+                    <h4 data-i18n="col.scene">适用场景</h4>
+                    <p data-i18n="a7.scenep">法语区（欧洲 / 非洲）企业主与财务负责人、跨境投资沟通、中法双语财务团队。</p>
+                    <h4 data-i18n="col.use">使用方式</h4>
+                    <p><a class="agent__link" href="https://ima.qq.com/wiki/?shareId=ce99c2f499bdc40d107183ad1f3cbaa0c8d35e891d1864fe6836d16f8f536bba" target="_blank" rel="noopener" data-i18n="a7.link">在 ima 中打开：Matrice Modèles Fin. AICFO →</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -293,120 +348,62 @@
     </section>
 
     <!-- ============ 使用指南 ============ -->
+    <!-- ============ 使用指南 ============ -->
     <section class="section" id="guide">
       <div class="container">
         <h2 class="section__title" data-i18n="g.title">使用指南</h2>
-        <p class="section__sub" data-i18n="g.sub">摘自《AICFO 使用说明书》——一页上手，四步会问，三段式看答案。</p>
 
         <h3 class="guide__h3"><span class="guide__num">01</span><span data-i18n="g.s1">提问四要素</span></h3>
-        <div class="grid grid--4">
-          <article class="card card--mini">
-            <h4 data-i18n="g.q1t">① 场景</h4>
-            <p data-i18n="g.q1p">你是谁、要办什么事</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.q2t">② 数据</h4>
-            <p data-i18n="g.q2p">给几个关键数字，或上传财报</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.q3t">③ 目标</h4>
-            <p data-i18n="g.q3p">想要什么结论：能不能 / 值不值 / 有什么风险</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.q4t">④ 风格</h4>
-            <p data-i18n="g.q4p">要它怎么讲：简单说 / 深度分析 / 上会版</p>
-          </article>
+        <div class="steps">
+          <div class="step">
+            <span class="step__no">1</span>
+            <strong data-i18n="g.q1t">场景</strong>
+            <p data-i18n="g.q1p">你是谁，办什么事</p>
+          </div>
+          <div class="step">
+            <span class="step__no">2</span>
+            <strong data-i18n="g.q2t">数据</strong>
+            <p data-i18n="g.q2p">关键数字，或上传财报</p>
+          </div>
+          <div class="step">
+            <span class="step__no">3</span>
+            <strong data-i18n="g.q3t">目标</strong>
+            <p data-i18n="g.q3p">能不能 / 值不值 / 风险</p>
+          </div>
+          <div class="step">
+            <span class="step__no">4</span>
+            <strong data-i18n="g.q4t">风格</strong>
+            <p data-i18n="g.q4p">简单说 / 深度 / 上会版</p>
+          </div>
         </div>
 
         <h3 class="guide__h3"><span class="guide__num">02</span><span data-i18n="g.s2">好问题 vs 坏问题</span></h3>
         <div class="guide__compare">
           <div class="panel panel--bad">
-            <h4 data-i18n="g.badt">✘ 坏问题（它只能泛泛）</h4>
+            <h4 data-i18n="g.badt">✘ 坏问题</h4>
             <p class="panel__quote" data-i18n="g.badp">"帮我看看公司怎么样"</p>
           </div>
           <div class="panel panel--good">
-            <h4 data-i18n="g.goodt">✔ 好问题（它给得出答案）</h4>
-            <p class="panel__quote" data-i18n="g.goodp">"我们是连锁餐饮，年营收 1.2 亿、净利率 4%，想判断要不要开第 5 家店；请从回报和现金两个角度给结论。"</p>
+            <h4 data-i18n="g.goodt">✔ 好问题</h4>
+            <p class="panel__quote" data-i18n="g.goodp">"连锁餐饮，年营收 1.2 亿、净利率 4%，要不要开第 5 家店？从回报和现金给结论。"</p>
           </div>
         </div>
 
-        <h3 class="guide__h3"><span class="guide__num">03</span><span data-i18n="g.s3">看懂答案：三段式 + 三标签</span></h3>
-        <div class="grid grid--2">
-          <article class="card">
-            <h4 data-i18n="g.partt">三段式结构</h4>
-            <ul class="guide__list">
-              <li data-i18n-html="g.part1"><strong>结论</strong> —— 先看这一句（一句话答案）</li>
-              <li data-i18n-html="g.part2"><strong>解释</strong> —— 为什么这么判</li>
-              <li data-i18n-html="g.part3"><strong>依据</strong> —— 数字 / 公式从哪来（可核对）</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h4 data-i18n="g.tagt">三级可信度标签</h4>
-            <ul class="guide__list">
-              <li data-i18n-html="g.tag1"><span class="tag tag--high">高确定</span> 可直接用</li>
-              <li data-i18n-html="g.tag2"><span class="tag tag--mid">需复核</span> 建议核对再定</li>
-              <li data-i18n-html="g.tag3"><span class="tag tag--low">数据不足</span> 需补数据</li>
-            </ul>
-          </article>
+        <h3 class="guide__h3"><span class="guide__num">03</span><span data-i18n="g.s3">看懂答案</span></h3>
+        <div class="answer-flow">
+          <span class="answer-flow__part" data-i18n-html="g.part1"><strong>结论</strong>一句话答案</span>
+          <span class="answer-flow__sep" aria-hidden="true">→</span>
+          <span class="answer-flow__part" data-i18n-html="g.part2"><strong>解释</strong>为什么这么判</span>
+          <span class="answer-flow__sep" aria-hidden="true">→</span>
+          <span class="answer-flow__part" data-i18n-html="g.part3"><strong>依据</strong>数字从哪来</span>
+          <span class="answer-flow__tags">
+            <span class="tag tag--high" data-i18n="g.tag1">高确定</span>
+            <span class="tag tag--mid" data-i18n="g.tag2">需复核</span>
+            <span class="tag tag--low" data-i18n="g.tag3">数据不足</span>
+          </span>
         </div>
 
-        <h3 class="guide__h3"><span class="guide__num">04</span><span data-i18n="g.s4">六个高频场景</span></h3>
-        <div class="grid grid--3">
-          <article class="card card--mini">
-            <h4 data-i18n="g.sc1t">现金流还能撑多久</h4>
-            <p class="card__quote" data-i18n="g.sc1p">"账上现金 ___，月固定支出 ___，告诉我还能撑几个月、哪个月最紧。"</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.sc2t">这个项目投不投</h4>
-            <p class="card__quote" data-i18n="g.sc2p">"新项目需投 ___ 万，预计回收 ___ 年，判断值不值，给结论。"</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.sc3t">公司值多少钱</h4>
-            <p class="card__quote" data-i18n="g.sc3p">"上传近 3 年财报，判断合理估值区间。"</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.sc4t">赚的钱是真的吗</h4>
-            <p class="card__quote" data-i18n="g.sc4p">"营收涨了但现金没涨，帮我看问题出在哪。"</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.sc5t">该股权还是债权融资</h4>
-            <p class="card__quote" data-i18n="g.sc5p">"需融资 ___ 万，帮我比较两种方式，给建议。"</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.sc6t">预算差在哪</h4>
-            <p class="card__quote" data-i18n="g.sc6p">"上传预算与实际，指出偏差根因。"</p>
-          </article>
-        </div>
-
-        <h3 class="guide__h3"><span class="guide__num">05</span><span data-i18n="g.s5">四个技巧</span></h3>
-        <div class="grid grid--4">
-          <article class="card card--mini">
-            <h4 data-i18n="g.tip1t">要人话</h4>
-            <p data-i18n="g.tip1p">开头加「简单说」</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.tip2t">要深挖</h4>
-            <p data-i18n="g.tip2p">开头加「深度分析」</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.tip3t">要开会用</h4>
-            <p data-i18n="g.tip3p">说「给我上会版」</p>
-          </article>
-          <article class="card card--mini">
-            <h4 data-i18n="g.tip4t">不满意</h4>
-            <p data-i18n="g.tip4p">追问三连：① 你为什么这么判？② 如果反过来会怎样？③ 还有什么没考虑到？</p>
-          </article>
-        </div>
-
-        <div class="guide__boundary">
-          <h4 data-i18n="g.boundt">使用边界（重要）</h4>
-          <ul>
-            <li data-i18n="g.bound1">它不是算命——它是决策辅助，不构成投资建议。</li>
-            <li data-i18n="g.bound2">所有计算的口径以你提供的数据为准；数据不准，结论就不准。</li>
-            <li data-i18n="g.bound3">它可以给判断，但最终拍板的永远是你（人）。</li>
-          </ul>
-          <p class="guide__checklist" data-i18n="g.checklist">上手清单：① 选中知识库 → ② 说清四要素 → ③ 先看「结论」那一句 → ④ 不懂就「追问三连」</p>
-        </div>
+        <p class="guide__boundary-line" data-i18n="g.boundline">它是决策辅助，不构成投资建议；数据不准，结论就不准；最终拍板的永远是你。</p>
       </div>
     </section>
 
@@ -414,44 +411,39 @@
     <section class="section section--alt" id="knowledge">
       <div class="container">
         <h2 class="section__title" data-i18n="kb.title">持续更新的知识库</h2>
-        <p class="section__sub" data-i18n="kb.sub">Agent 背后的知识底座——定期采集、持续归档，在 ima 上开放订阅。</p>
+        <p class="section__sub" data-i18n="kb.sub">定期采集、持续归档，在 ima 上开放订阅。</p>
 
-        <h3 class="guide__h3"><span class="guide__num">A</span><span data-i18n="kb.ga">专业内容库</span></h3>
-        <div class="grid grid--3">
-          <article class="card">
-            <h3 class="card__h">邵奇｜CFO 财税知识库</h3>
-            <p data-i18n="kb.a1p">CFO 视角拆解财务、税务与经营管理问题。</p>
-            <p class="card__meta" data-i18n="kb.a1m">916 条内容</p>
-          </article>
-          <article class="card">
-            <h3 class="card__h">邵奇｜生物医药前沿</h3>
-            <p data-i18n="kb.a2p">站在 CFO 视角，看懂医药行业的商业逻辑。</p>
-            <p class="card__meta" data-i18n="kb.a2m">479 条内容</p>
-          </article>
-          <article class="card">
-            <h3 class="card__h">邵奇｜AI 搞钱实验室</h3>
-            <p data-i18n="kb.a3p">善用 AI，让专业能力获得 10 倍增长。</p>
-            <p class="card__meta" data-i18n="kb.a3m">2620 条内容</p>
-          </article>
-        </div>
-
-        <h3 class="guide__h3"><span class="guide__num">B</span><span data-i18n="kb.gb">思维模型库</span></h3>
-        <div class="grid grid--3">
-          <article class="card">
-            <h3 class="card__h">决策思维模型合集</h3>
-            <p data-i18n="kb.b1p">攻克复杂业务逻辑的思维模型。</p>
-            <p class="card__meta" data-i18n="kb.b1m">33 条内容</p>
-          </article>
-          <article class="card">
-            <h3 class="card__h">反脆弱「塔勒布四部」</h3>
-            <p data-i18n="kb.b2p">在不确定时代，建立企业和个人的抗风险能力。</p>
-            <p class="card__meta" data-i18n="kb.b2m">111 条内容</p>
-          </article>
-          <article class="card">
-            <h3 class="card__h">查理·芒格「思维工具库」</h3>
-            <p data-i18n="kb.b3p">借鉴芒格智慧，训练 CFO 式商业判断。</p>
-            <p class="card__meta" data-i18n="kb.b3m">76 条内容</p>
-          </article>
+        <div class="grid grid--2 kb-grid">
+          <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=b777fd035f497af563aec2751f08f61e6236a8fe392314b74681c15a2cf0ab39" target="_blank" rel="noopener">
+            <span class="kb-card__name">邵奇｜CFO 财税知识库</span>
+            <span class="kb-card__desc" data-i18n="kb.a1p">CFO 视角拆解财务、税务与经营管理</span>
+            <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.a1m">收录 916 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=2881766df71601106d208aacf05aef447f962ddd4126074c5d73766139d1ca93" target="_blank" rel="noopener">
+            <span class="kb-card__name">邵奇｜生物医药前沿</span>
+            <span class="kb-card__desc" data-i18n="kb.a2p">CFO 视角看医药行业的商业逻辑</span>
+            <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.a2m">收录 479 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=f662859e83cb14ba962432f51d63e5d9178586623aa1ea08b259f7788c913636" target="_blank" rel="noopener">
+            <span class="kb-card__name">邵奇｜AI 搞钱实验室</span>
+            <span class="kb-card__desc" data-i18n="kb.a3p">让专业能力获得 10 倍增长</span>
+            <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.a3m">收录 2620 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=113869489b6a687c89ff4d1c868bee9ece5318654b165f016d5d705157d1049a" target="_blank" rel="noopener">
+            <span class="kb-card__name">邵奇｜决策思维模型合集</span>
+            <span class="kb-card__desc" data-i18n="kb.b1p">攻克复杂业务逻辑的思维模型</span>
+            <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.b1m">收录 33 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=cd192bd2b71093e3706b1c5b3414b7aa3ab9e75ef3615bdea5a1f6b441765204" target="_blank" rel="noopener">
+            <span class="kb-card__name">邵奇｜反脆弱「塔勒布四部」</span>
+            <span class="kb-card__desc" data-i18n="kb.b2p">不确定时代的抗风险能力</span>
+            <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.b2m">收录 111 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=23b1a933d20ce7d74694402b6178009e3e33c3db6e81a0172339e2fd25e67c99" target="_blank" rel="noopener">
+            <span class="kb-card__name">邵奇｜查理·芒格「思维工具库」</span>
+            <span class="kb-card__desc" data-i18n="kb.b3p">训练 CFO 式商业判断</span>
+            <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.b3m">收录 76 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
         </div>
       </div>
     </section>
@@ -459,8 +451,8 @@
     <!-- ============ 截图 / 演示 ============ -->
     <section class="section" id="demo">
       <div class="container">
-        <h2 class="section__title" data-i18n="demo.title">演示与截图</h2>
-        <p class="section__sub" data-i18n="demo.sub">先看一段模拟对话，直观感受 Agent 的输出形态；点击下方主题示意图可直达对应智能体。</p>
+        <h2 class="section__title" data-i18n="demo.title">演示</h2>
+        <p class="section__sub" data-i18n="demo.sub">一段模拟对话，直观感受 Agent 的提问方式与输出形态。</p>
 
         <!-- 模拟对话演示 -->
         <div class="chat" id="demoChat">
@@ -475,27 +467,6 @@
             <span class="chat__note" data-i18n="demo.note">示例来自《AICFO 使用说明书》，回答为演示模拟，非真实对话记录</span>
           </div>
         </div>
-
-        <div class="grid grid--3 demo__grid">
-          <figure class="shot">
-            <a href="https://ima.qq.com/wiki/?shareId=1851b12407be4f660ced517e56dfd5a7ed865da90a293c2a3dc23b731852195e" target="_blank" rel="noopener">
-              <img src="assets/screenshots/demo-ecom.png" alt="电商 AI 智能体主题示意图：包裹、购物车与资金流" data-i18n-alt="demo.img1alt" loading="lazy" />
-            </a>
-            <figcaption data-i18n="demo.fig1">电商 AI 智能体 · 示意图</figcaption>
-          </figure>
-          <figure class="shot">
-            <a href="https://ima.qq.com/wiki/?shareId=6937ec10e7913693fdd705d00bb3c58ffd8056a50589a7c5487725e14a4d27c3" target="_blank" rel="noopener">
-              <img src="assets/screenshots/demo-restaurant.png" alt="餐饮老板 AI 智能体主题示意图：门店经营与账本" data-i18n-alt="demo.img2alt" loading="lazy" />
-            </a>
-            <figcaption data-i18n="demo.fig2">餐饮老板 AI 智能体 · 示意图</figcaption>
-          </figure>
-          <figure class="shot">
-            <a href="https://ima.qq.com/wiki/?shareId=d9c5086fe7550b9a29688eddf5c73f590ca27161ff4ef15f794e3038d392ac56" target="_blank" rel="noopener">
-              <img src="assets/screenshots/demo-school.png" alt="民办学校 AI 智能体主题示意图：校园与数据看板" data-i18n-alt="demo.img3alt" loading="lazy" />
-            </a>
-            <figcaption data-i18n="demo.fig3">民办学校 AI 智能体 · 示意图</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
@@ -506,23 +477,23 @@
         <div class="faq">
           <details class="faq__item">
             <summary data-i18n="faq.q1">这些 Agent 是免费的吗？</summary>
-            <p data-i18n="faq.a1">目前通过 ima 平台免费开放使用，点击各 Agent 卡片中的入口链接即可开始对话。</p>
+            <p data-i18n="faq.a1">目前免费开放，点任意卡片中的入口链接即可开始。</p>
           </details>
           <details class="faq__item">
             <summary data-i18n="faq.q2">和直接问通用大模型有什么区别？</summary>
-            <p data-i18n="faq.a2">通用模型缺少行业纵深且容易漂移。本矩阵以 10 年 CFO 实战经验为知识底座，并经过 120 题验证题库与 8 个主流模型的横向对比校准，专业口径更稳定。</p>
+            <p data-i18n="faq.a2">通用模型缺行业纵深且易漂移。本矩阵以 10 年 CFO 经验为底座，经多平台 benchmark 同题横评校准。</p>
           </details>
           <details class="faq__item">
             <summary data-i18n="faq.q3">A 方式和 B 方式有什么区别？</summary>
-            <p data-i18n="faq.a3">A 方式（基于知识库的问答互动）幻觉率低、仅针对知识库内容回复，可联网查询、速度快，可选择模型深度思考，灵活度较好；B 方式（Copilot + 知识库）适合长时间调教，可配置 MCP、Skill，可生成 PDF、Word 等格式，报告完整度高，可存储记忆。</p>
+            <p data-i18n="faq.a3">A：仅围绕知识库回答，快、幻觉低；B：可配 MCP/Skill、生成 PDF/Word 报告、可存记忆。</p>
           </details>
           <details class="faq__item">
             <summary data-i18n="faq.q4">我的财务数据会被泄露吗？</summary>
-            <p data-i18n="faq.a4">建议对话中隐去企业真实名称、金额等敏感信息，使用脱敏后的案例进行提问。平台侧的数据策略以 ima 官方说明为准。</p>
+            <p data-i18n="faq.a4">建议隐去真实名称与金额，用脱敏后的案例提问。</p>
           </details>
           <details class="faq__item">
             <summary data-i18n="faq.q5">可以定制我自己行业的智能体吗？</summary>
-            <p data-i18n="faq.a5">可以。底座支持按行业衍生，欢迎通过下方联系方式沟通你的行业与场景需求。</p>
+            <p data-i18n="faq.a5">可以。底座支持按行业衍生，欢迎通过底部联系方式沟通。</p>
           </details>
         </div>
       </div>
@@ -533,15 +504,15 @@
       <div class="container container--narrow contact">
         <h2 class="section__title" data-i18n="ct.title">联系与合作</h2>
         <p class="section__sub" data-i18n="ct.sub">行业智能体定制、企业内控诊断合作、讲座邀约，欢迎联系。</p>
-        <div class="grid grid--2">
-          <div class="contact__item">
+        <div class="contact__single">
+          <div class="contact__cell">
             <h3 data-i18n="ct.wx">微信</h3>
-            <p class="contact__wx" data-i18n="ct.wxp">微信号：67757008</p>
+            <p class="contact__value" data-i18n="ct.wxp">67757008</p>
           </div>
-          <div class="contact__item">
+          <div class="contact__divider" aria-hidden="true"></div>
+          <div class="contact__cell">
             <h3 data-i18n="ct.mail">邮箱</h3>
-            <!-- TODO: 替换为真实邮箱 -->
-            <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p class="contact__value"><a href="mailto:67757008@qq.com">67757008@qq.com</a></p>
           </div>
         </div>
       </div>
@@ -556,6 +527,7 @@
     </div>
   </footer>
 
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
   <script src="js/i18n.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
