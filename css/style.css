@@ -1003,6 +1003,24 @@ code {
 @keyframes char-in {
   to { opacity: 1; filter: blur(0); transform: none; }
 }
+/* 渐变字部分：逐字自带渐变，且不用 filter（与 background-clip 冲突） */
+.hero__title.is-split .accent {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+.accent .char {
+  filter: none;
+  animation-name: char-in-soft;
+  background: linear-gradient(120deg, var(--color-primary-light), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@keyframes char-in-soft {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
 
 @media (max-width: 900px) {
   .grid--3 { grid-template-columns: 1fr 1fr; }

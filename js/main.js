@@ -122,6 +122,7 @@
     }
 
     var fresh = h1.cloneNode(false);
+    fresh.classList.add("is-split");
     fresh.appendChild(wrapChars(h1));
     h1.parentNode.replaceChild(fresh, h1);
   }
