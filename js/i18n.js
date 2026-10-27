@@ -140,6 +140,7 @@
       "g.tag2": "需复核",
       "g.tag3": "数据不足",
       "g.boundline": "它是决策辅助，不构成投资建议；数据不准，结论就不准；最终拍板的永远是你。",
+      "g.dl": "下载《AICFO 使用说明书》PDF ⤓",
 
       "kb.title": "持续更新的知识库",
       "kb.sub": "定期采集、持续归档，在 ima 上开放订阅。",
@@ -336,6 +337,7 @@
       "g.tag2": "Review",
       "g.tag3": "Low data",
       "g.boundline": "Decision support, not investment advice. Bad data in, bad conclusions out. The final call is always yours.",
+      "g.dl": "Download the AICFO User Manual (PDF) ⤓",
 
       "kb.title": "Continuously Updated Knowledge Bases",
       "kb.sub": "Regularly collected and archived — open for subscription on ima.",
