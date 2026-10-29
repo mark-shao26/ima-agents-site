@@ -531,6 +531,72 @@ code {
 .agent__col p { color: var(--color-text-dim); font-size: 14.5px; }
 .agent__link { font-weight: 600; }
 
+/* ---------- 专家矩阵（分类通栏 + 三列网格） ---------- */
+.exp-table {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  table-layout: fixed;
+}
+.exp-table td {
+  padding: 14px 12px;
+  text-align: center;
+  color: var(--color-text-dim);
+  line-height: 1.7;
+  word-break: keep-all;
+  border-bottom: 1px solid var(--color-border);
+}
+.exp-band td {
+  text-align: left;
+  padding: 8px 0;
+  color: var(--color-primary-light);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* 附录式标题行：发丝线 + 小字说明 */
+.exp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 26px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--color-text-dim);
+}
+.exp-caption::before,
+.exp-caption::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+@media (max-width: 640px) {
+  .exp-table { max-width: none; }
+  /* 手机上三列网格塌成流式排列，全名完整可见 */
+  .exp-table, .exp-table tbody, .exp-table tr { display: block; }
+  .exp-table td {
+    display: inline-block;
+    border-bottom: none;
+    padding: 6px 4px;
+    margin: 3px 6px 3px 0;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .exp-band td {
+    display: block;
+    margin: 12px 0 4px;
+    padding: 8px 0;
+  }
+}
+
 /* ---------- 知识库卡片 ---------- */
 .kb-grid { gap: 24px; }
 .kb-card {

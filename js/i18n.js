@@ -41,6 +41,36 @@
       "hl3.t": "多模型交叉验证",
       "hl3.p": "同题 benchmark 横向对比主流大模型，持续校准专业口径。",
 
+      "nav.experts": "专家",
+      "ex.caption": "另附 · WorkBuddy 应用中可直接调用的专家列表（共 18 位）",
+      "ex.th1": "分类",
+      "ex.th2": "专家",
+
+      "ex.c1": "现金流与风控",
+      "ex.c2": "经营与预算",
+      "ex.c3": "审计与舞弊",
+      "ex.c4": "投资与尽调",
+      "ex.c5": "行业专题",
+      "ex.c6": "治理与个人",
+      "ex.e1": "现金流跑道-资金链预警与压力测试",
+      "ex.e2": "风控经理-财务风险预警与监测",
+      "ex.e3": "企业CFO财务决策顾问",
+      "ex.e4": "经营决策-风险与路径推演",
+      "ex.e5": "预算绩效管理与决算",
+      "ex.e6": "采购流程-不相容岗位与资产台账",
+      "ex.e7": "审计师-减值判断与底稿支撑",
+      "ex.e8": "企业反舞弊调查顾问-财务造假识别",
+      "ex.e9": "月末结账-对账差错与审计应对",
+      "ex.e10": "投行分析师-财务尽调穿透",
+      "ex.e11": "VC/PE投资人-H3标的评估",
+      "ex.e12": "餐厅财务税务法务顾问",
+      "ex.e13": "网店财务税务法务顾问",
+      "ex.e14": "学校财务与招生顾问",
+      "ex.e15": "行政事业单位财务核算",
+      "ex.e16": "基建财务与竣工决算",
+      "ex.e17": "董事会秘书-信息披露与合规",
+      "ex.e18": "买房租房-月供与家庭资产测算",
+
       "agents.title": "智能体一览",
       "agents.sub": "点击任意一行展开详情，入口链接在详情内。",
       "agents.badge": "行业智能体",
@@ -64,7 +94,7 @@
       "a1.usep": "打开 ima.copilot → 选择知识库「AI CFO」→ 直接输入问题，或上传报表（Excel / PDF 均可）。",
       "a1.link": "在 ima 中打开「邵奇｜财务模型矩阵｜AI CFO」→",
 
-      "a2.brief": "算账 · 穿透 · 合判",
+      "a2.brief": "算账 · 穿透 · 合判 · 获客能力分析",
       "a2.tag": "算清账 · 穿透业务 · 追溯运营 · 财法合判——放大你的判断力",
       "a2.meta": "沉淀 191 条知识",
       "a2.li1": "平台结算单与账务核对逻辑",
@@ -73,7 +103,7 @@
       "a2.scenep": "电商企业财务、多平台店铺经营者、代账机构。",
       "a2.link": "在 ima 中打开：电商 AI 智能体（财、税、法务）→",
 
-      "a3.brief": "财税法一体军师",
+      "a3.brief": "财税法一体军师 · 获客能力分析",
       "a3.tag": "财务、税务、法务三位一体，餐饮老板的 AI 军师",
       "a3.meta": "沉淀 362 条知识",
       "a3.li1": "单店 / 连锁门店损益分析",
@@ -118,27 +148,35 @@
       "a7.link": "在 ima 中打开：Matrice Modèles Fin. AICFO →",
 
       "g.title": "使用指南",
-      "g.s1": "提问四要素",
-      "g.q1t": "场景",
-      "g.q1p": "你是谁，办什么事",
-      "g.q2t": "数据",
-      "g.q2p": "关键数字，或上传财报",
-      "g.q3t": "目标",
-      "g.q3p": "能不能 / 值不值 / 风险",
-      "g.q4t": "风格",
-      "g.q4p": "简单说 / 深度 / 上会版",
-      "g.s2": "好问题 vs 坏问题",
-      "g.badt": "✘ 坏问题",
-      "g.badp": "\"帮我看看公司怎么样\"",
-      "g.goodt": "✔ 好问题",
-      "g.goodp": "\"连锁餐饮，年营收 1.2 亿、净利率 4%，要不要开第 5 家店？从回报和现金给结论。\"",
-      "g.s3": "看懂答案",
-      "g.part1": "<strong>结论</strong>一句话答案",
-      "g.part2": "<strong>解释</strong>为什么这么判",
-      "g.part3": "<strong>依据</strong>数字从哪来",
-      "g.tag1": "高确定",
-      "g.tag2": "需复核",
-      "g.tag3": "数据不足",
+      "g.sub": "在 ima 中四步上手，全程不超过 1 分钟。",
+      "g.st1t": "进入 ima",
+      "g.st1p": "打开 ima.qq.com，微信扫码登录",
+      "g.st2t": "选知识库",
+      "g.st2p": "点本站任一智能体链接，直达对应知识库",
+      "g.st3t": "提问或上传",
+      "g.st3p": "直接输入问题，或点回形针上传 Excel / PDF 报表",
+      "g.st4t": "追问与分享",
+      "g.st4p": "按「结论—解释—依据」读答案，继续追问或分享结果",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       "g.boundline": "它是决策辅助，不构成投资建议；数据不准，结论就不准；最终拍板的永远是你。",
       "g.dl": "下载《AICFO 使用说明书》PDF ⤓",
 
@@ -238,6 +276,36 @@
       "hl3.t": "Cross-Model Validation",
       "hl3.p": "Same-question benchmarks against mainstream LLMs, with continuous calibration.",
 
+      "nav.experts": "Experts",
+      "ex.caption": "Appendix · All 18 experts available in the WorkBuddy app",
+      "ex.th1": "Category",
+      "ex.th2": "Expert",
+
+      "ex.c1": "Cash & Risk",
+      "ex.c2": "Operations & Budget",
+      "ex.c3": "Audit & Fraud",
+      "ex.c4": "Investment & DD",
+      "ex.c5": "Industry Practice",
+      "ex.c6": "Governance & Personal",
+      "ex.e1": "现金流跑道-资金链预警与压力测试",
+      "ex.e2": "风控经理-财务风险预警与监测",
+      "ex.e3": "企业CFO财务决策顾问",
+      "ex.e4": "经营决策-风险与路径推演",
+      "ex.e5": "预算绩效管理与决算",
+      "ex.e6": "采购流程-不相容岗位与资产台账",
+      "ex.e7": "审计师-减值判断与底稿支撑",
+      "ex.e8": "企业反舞弊调查顾问-财务造假识别",
+      "ex.e9": "月末结账-对账差错与审计应对",
+      "ex.e10": "投行分析师-财务尽调穿透",
+      "ex.e11": "VC/PE投资人-H3标的评估",
+      "ex.e12": "餐厅财务税务法务顾问",
+      "ex.e13": "网店财务税务法务顾问",
+      "ex.e14": "学校财务与招生顾问",
+      "ex.e15": "行政事业单位财务核算",
+      "ex.e16": "基建财务与竣工决算",
+      "ex.e17": "董事会秘书-信息披露与合规",
+      "ex.e18": "买房租房-月供与家庭资产测算",
+
       "agents.title": "The Agents",
       "agents.sub": "Click any row to expand details; the entry link is inside.",
       "agents.badge": "Industry Agent",
@@ -262,7 +330,7 @@
       "a1.link": "Open on ima: Shaoqi | Financial Model Matrix | AI CFO →",
 
       "a2.tag": "Clear books · See through the business · Trace operations · Finance meets legal — amplifying your judgment",
-      "a2.brief": "Books · Insight · Legal",
+      "a2.brief": "Books · Insight · Legal · Acquisition analysis",
       "a2.meta": "191 curated entries",
       "a2.li1": "Reconciliation logic for platform settlement statements",
       "a2.li2": "Tax treatment of order inflation, refunds and commissions",
@@ -271,7 +339,7 @@
       "a2.link": "Open on ima: E-commerce AI Agent (Finance, Tax, Legal) →",
 
       "a3.tag": "Finance, tax and legal in one — the AI strategist for restaurant owners",
-      "a3.brief": "Finance, tax & legal in one",
+      "a3.brief": "Finance, tax & legal in one · Acquisition analysis",
       "a3.meta": "362 curated entries",
       "a3.li1": "P&L analysis for single stores and chains",
       "a3.li2": "Reading key metrics: food-cost ratio, labor efficiency",
@@ -315,27 +383,35 @@
       "a7.link": "Open on ima: Matrice Modèles Fin. AICFO →",
 
       "g.title": "User Guide",
-      "g.s1": "Four Elements of a Good Question",
-      "g.q1t": "Context",
-      "g.q1p": "Who you are, what you need",
-      "g.q2t": "Data",
-      "g.q2p": "Key figures, or upload statements",
-      "g.q3t": "Goal",
-      "g.q3p": "Feasible? Worth it? Risks?",
-      "g.q4t": "Style",
-      "g.q4p": "Plain / Deep / Board-ready",
-      "g.s2": "Good Question vs Bad Question",
-      "g.badt": "✘ Bad question",
-      "g.badp": "\"How is my company doing?\"",
-      "g.goodt": "✔ Good question",
-      "g.goodp": "\"Restaurant chain, RMB 120M revenue, 4% net margin — open a 5th location? Conclude on payback and cash.\"",
-      "g.s3": "Reading the Answer",
-      "g.part1": "<strong>Conclusion</strong> the one-sentence answer",
-      "g.part2": "<strong>Reasoning</strong> why it judges so",
-      "g.part3": "<strong>Basis</strong> where numbers come from",
-      "g.tag1": "High",
-      "g.tag2": "Review",
-      "g.tag3": "Low data",
+      "g.sub": "Four steps on ima — under a minute to get started.",
+      "g.st1t": "Open ima",
+      "g.st1p": "Go to ima.qq.com and sign in with WeChat",
+      "g.st2t": "Pick a knowledge base",
+      "g.st2p": "Click any agent link on this site to open its knowledge base",
+      "g.st3t": "Ask or upload",
+      "g.st3p": "Type your question, or upload Excel / PDF statements via the paperclip",
+      "g.st4t": "Follow up and share",
+      "g.st4p": "Read conclusion, reasoning and basis, then follow up or share",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       "g.boundline": "Decision support, not investment advice. Bad data in, bad conclusions out. The final call is always yours.",
       "g.dl": "Download the AICFO User Manual (PDF) ⤓",
 

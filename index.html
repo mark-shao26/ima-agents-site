@@ -27,6 +27,7 @@
         <ul class="nav__menu" id="navMenu">
           <li><a href="#overview" data-i18n="nav.overview">概览</a></li>
           <li><a href="#agents" data-i18n="nav.agents">智能体</a></li>
+          <li><a href="#experts" data-i18n="nav.experts">专家</a></li>
           <li><a href="#guide" data-i18n="nav.guide">使用指南</a></li>
           <li><a href="#knowledge" data-i18n="nav.knowledge">知识库</a></li>
           <li><a href="#demo" data-i18n="nav.demo">演示</a></li>
@@ -145,7 +146,7 @@
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
               <span class="agent__main">
                 <span class="agent__name">电商 AI 智能体（财、税、法务）</span>
-                <span class="agent__brief" data-i18n="a2.brief">算账 · 穿透 · 合判</span>
+                <span class="agent__brief" data-i18n="a2.brief">算账 · 穿透 · 合判 · 获客能力分析</span>
               </span>
               <span class="agent__meta" data-i18n="a2.meta">沉淀 191 条知识</span>
               <span class="agent__chevron" aria-hidden="true"></span>
@@ -179,7 +180,7 @@
               <span class="agent__badge agent__badge--alt" data-i18n="agents.badge">行业智能体</span>
               <span class="agent__main">
                 <span class="agent__name">餐饮老板 AI 智能体（财+税+法）</span>
-                <span class="agent__brief" data-i18n="a3.brief">财税法一体军师</span>
+                <span class="agent__brief" data-i18n="a3.brief">财税法一体军师 · 获客能力分析</span>
               </span>
               <span class="agent__meta" data-i18n="a3.meta">沉淀 362 条知识</span>
               <span class="agent__chevron" aria-hidden="true"></span>
@@ -348,59 +349,33 @@
     </section>
 
     <!-- ============ 使用指南 ============ -->
-    <!-- ============ 使用指南 ============ -->
+    <!-- ============ 使用指南（ima 操作流程） ============ -->
     <section class="section" id="guide">
       <div class="container">
         <h2 class="section__title" data-i18n="g.title">使用指南</h2>
+        <p class="section__sub" data-i18n="g.sub">在 ima 中四步上手，全程不超过 1 分钟。</p>
 
-        <h3 class="guide__h3"><span class="guide__num">01</span><span data-i18n="g.s1">提问四要素</span></h3>
         <div class="steps">
           <div class="step">
             <span class="step__no">1</span>
-            <strong data-i18n="g.q1t">场景</strong>
-            <p data-i18n="g.q1p">你是谁，办什么事</p>
+            <strong data-i18n="g.st1t">进入 ima</strong>
+            <p data-i18n="g.st1p">打开 ima.qq.com，微信扫码登录</p>
           </div>
           <div class="step">
             <span class="step__no">2</span>
-            <strong data-i18n="g.q2t">数据</strong>
-            <p data-i18n="g.q2p">关键数字，或上传财报</p>
+            <strong data-i18n="g.st2t">选知识库</strong>
+            <p data-i18n="g.st2p">点本站任一智能体链接，直达对应知识库</p>
           </div>
           <div class="step">
             <span class="step__no">3</span>
-            <strong data-i18n="g.q3t">目标</strong>
-            <p data-i18n="g.q3p">能不能 / 值不值 / 风险</p>
+            <strong data-i18n="g.st3t">提问或上传</strong>
+            <p data-i18n="g.st3p">直接输入问题，或点回形针上传 Excel / PDF 报表</p>
           </div>
           <div class="step">
             <span class="step__no">4</span>
-            <strong data-i18n="g.q4t">风格</strong>
-            <p data-i18n="g.q4p">简单说 / 深度 / 上会版</p>
+            <strong data-i18n="g.st4t">追问与分享</strong>
+            <p data-i18n="g.st4p">按「结论—解释—依据」读答案，继续追问或分享结果</p>
           </div>
-        </div>
-
-        <h3 class="guide__h3"><span class="guide__num">02</span><span data-i18n="g.s2">好问题 vs 坏问题</span></h3>
-        <div class="guide__compare">
-          <div class="panel panel--bad">
-            <h4 data-i18n="g.badt">✘ 坏问题</h4>
-            <p class="panel__quote" data-i18n="g.badp">"帮我看看公司怎么样"</p>
-          </div>
-          <div class="panel panel--good">
-            <h4 data-i18n="g.goodt">✔ 好问题</h4>
-            <p class="panel__quote" data-i18n="g.goodp">"连锁餐饮，年营收 1.2 亿、净利率 4%，要不要开第 5 家店？从回报和现金给结论。"</p>
-          </div>
-        </div>
-
-        <h3 class="guide__h3"><span class="guide__num">03</span><span data-i18n="g.s3">看懂答案</span></h3>
-        <div class="answer-flow">
-          <span class="answer-flow__part" data-i18n-html="g.part1"><strong>结论</strong>一句话答案</span>
-          <span class="answer-flow__sep" aria-hidden="true">→</span>
-          <span class="answer-flow__part" data-i18n-html="g.part2"><strong>解释</strong>为什么这么判</span>
-          <span class="answer-flow__sep" aria-hidden="true">→</span>
-          <span class="answer-flow__part" data-i18n-html="g.part3"><strong>依据</strong>数字从哪来</span>
-          <span class="answer-flow__tags">
-            <span class="tag tag--high" data-i18n="g.tag1">高确定</span>
-            <span class="tag tag--mid" data-i18n="g.tag2">需复核</span>
-            <span class="tag tag--low" data-i18n="g.tag3">数据不足</span>
-          </span>
         </div>
 
         <p class="guide__boundary-line" data-i18n="g.boundline">它是决策辅助，不构成投资建议；数据不准，结论就不准；最终拍板的永远是你。</p>
@@ -521,6 +496,33 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ 专家矩阵 ============ -->
+    <section class="section" id="experts">
+      <div class="container">
+        <p class="exp-caption" data-i18n="ex.caption">另附 · WorkBuddy 应用中可直接调用的「专家」列表（共 18 位）</p>
+
+        <table class="exp-table">
+          <tbody>
+          <tr class="exp-band"><td colspan="3" data-i18n="ex.c1">现金流与风控</td></tr>
+          <tr><td data-i18n="ex.e1">「现金流跑道-资金链预警与压力测试」</td><td data-i18n="ex.e2">「风控经理-财务风险预警与监测」</td><td data-i18n="ex.e3">「企业CFO财务决策顾问」</td></tr>
+          <tr class="exp-band"><td colspan="3" data-i18n="ex.c2">经营与预算</td></tr>
+          <tr><td data-i18n="ex.e4">「经营决策-风险与路径推演」</td><td data-i18n="ex.e5">「预算绩效管理与决算」</td><td data-i18n="ex.e6">「采购流程-不相容岗位与资产台账」</td></tr>
+          <tr class="exp-band"><td colspan="3" data-i18n="ex.c3">审计与舞弊</td></tr>
+          <tr><td data-i18n="ex.e7">「审计师-减值判断与底稿支撑」</td><td data-i18n="ex.e8">「企业反舞弊调查顾问-财务造假识别」</td><td data-i18n="ex.e9">「月末结账-对账差错与审计应对」</td></tr>
+          <tr class="exp-band"><td colspan="3" data-i18n="ex.c4">投资与尽调</td></tr>
+          <tr><td data-i18n="ex.e10">「投行分析师-财务尽调穿透」</td><td data-i18n="ex.e11">「VC/PE投资人-H3标的评估」</td><td class="exp-empty" aria-hidden="true"></td></tr>
+          <tr class="exp-band"><td colspan="3" data-i18n="ex.c5">行业专题</td></tr>
+          <tr><td data-i18n="ex.e12">「餐厅财务税务法务顾问」</td><td data-i18n="ex.e13">「网店财务税务法务顾问」</td><td data-i18n="ex.e14">「学校财务与招生顾问」</td></tr>
+          <tr><td data-i18n="ex.e15">「行政事业单位财务核算」</td><td data-i18n="ex.e16">「基建财务与竣工决算」</td><td class="exp-empty" aria-hidden="true"></td></tr>
+          <tr class="exp-band"><td colspan="3" data-i18n="ex.c6">治理与个人</td></tr>
+          <tr><td data-i18n="ex.e17">「董事会秘书-信息披露与合规」</td><td data-i18n="ex.e18">「买房租房-月供与家庭资产测算」</td><td class="exp-empty" aria-hidden="true"></td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
 
   </main>
 
