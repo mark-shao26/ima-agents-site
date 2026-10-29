@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>授权结果 | 邵奇 AICFO</title>
+  <style>
+    :root {
+      --bg: #0f0d14;
+      --surface: #1e1929;
+      --border: #2d2540;
+      --text: #ece8f2;
+      --dim: #a89ec0;
+      --primary: #82318e;
+      --primary-light: #b06cc0;
+      --accent: #d9b8e6;
+      --ok: #8fd6a0;
+      --warn: #e8cd8a;
+      --err: #e8a0a0;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --font: "Inter", "Noto Sans SC", "DengXian", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      font-family: var(--font);
+      background:
+        radial-gradient(ellipse 60% 45% at 50% 0%, rgba(130, 49, 142, 0.35), transparent 65%),
+        radial-gradient(ellipse 45% 35% at 15% 90%, rgba(130, 49, 142, 0.18), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+    /* 科技网格 */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(176, 108, 192, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(176, 108, 192, 0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 30%, transparent 75%);
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 46px 40px 38px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      animation: card-in 0.7s var(--ease) both;
+    }
+    @keyframes card-in {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+    /* 顶部渐变光线 */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+    }
+
+    .mark {
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      border: 1px solid var(--primary);
+      color: var(--ok);
+      box-shadow: 0 0 28px rgba(130, 49, 142, 0.35), inset 0 0 18px rgba(130, 49, 142, 0.18);
+    }
+    .card[data-state="success"] .mark { color: var(--ok); border-color: rgba(143, 214, 160, 0.6); }
+    .card[data-state="error"] .mark { color: var(--err); border-color: rgba(232, 160, 160, 0.55); }
+    .card[data-state="idle"] .mark { color: var(--warn); border-color: rgba(232, 205, 138, 0.5); }
+
+    h1 {
+      font-size: 23px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .en {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--dim);
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+    }
+    p.desc {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--dim);
+    }
+    .detail {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      font-size: 12.5px;
+      color: var(--dim);
+      word-break: break-all;
+      display: none;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: transform 0.2s var(--ease), box-shadow 0.25s, background 0.2s;
+      font-family: inherit;
+    }
+    .btn--primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(130, 49, 142, 0.45);
+    }
+    .btn--ghost {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--dim);
+    }
+    .btn--ghost:hover { border-color: var(--primary); color: var(--text); }
+
+    .foot {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--dim);
+      letter-spacing: 0.02em;
+    }
+    .foot a { color: var(--primary-light); text-decoration: none; }
+    .countdown { color: var(--accent); font-variant-numeric: tabular-nums; }
+
+    @media (max-width: 480px) {
+      .card { padding: 36px 24px 30px; }
+      h1 { font-size: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" id="card" data-state="idle" role="status" aria-live="polite">
+    <div class="mark" id="mark">✓</div>
+    <h1 id="title">
+      正在确认授权结果
+      <span class="en" id="titleEn">Checking authorization result</span>
+    </h1>
+    <p class="desc" id="desc">
+      请稍候，页面正在读取应用回传的授权信息。
+    </p>
+    <div class="detail" id="detail"></div>
+
+    <div class="actions">
+      <button class="btn btn--primary" id="returnBtn" type="button">返回 WorkBuddy 继续</button>
+      <a class="btn btn--ghost" href="../../index.html">回到 AICFO 智能体主页</a>
+    </div>
+
+    <p class="foot" id="foot">
+      本页为邵奇 AICFO 应用的授权回调页 · 不会保存任何凭证
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+      var params = new URLSearchParams(window.location.search);
+      var code = params.get("code");
+      var error = params.get("error") || params.get("error_code");
+      var errorDesc = params.get("error_description") || params.get("error_msg");
+      var state = params.get("state");
+
+      var card = document.getElementById("card");
+      var mark = document.getElementById("mark");
+      var title = document.getElementById("title");
+      var titleEn = document.getElementById("titleEn");
+      var desc = document.getElementById("desc");
+      var detail = document.getElementById("detail");
+      var returnBtn = document.getElementById("returnBtn");
+      var foot = document.getElementById("foot");
+
+      function render(stateType, zh, en, message, extra) {
+        card.setAttribute("data-state", stateType);
+        mark.textContent = stateType === "success" ? "✓" : (stateType === "error" ? "!" : "·");
+        title.childNodes[0].nodeValue = zh;
+        titleEn.textContent = en;
+        desc.textContent = message;
+        if (extra) {
+          detail.style.display = "block";
+          detail.textContent = extra;
+        }
+      }
+
+      if (error) {
+        render(
+          "error",
+          "授权未完成",
+          "Authorization not completed",
+          "平台返回了错误，未完成授权。请返回应用重新发起授权；若反复失败，可联系应用提供方。",
+          "错误信息：" + error + (errorDesc ? " / " + errorDesc : "")
+        );
+        returnBtn.textContent = "返回应用重试";
+      } else if (code) {
+        render(
+          "success",
+          "授权成功",
+          "Authorization successful",
+          "已收到授权凭证。请返回 WorkBuddy，继续与智能体对话。",
+          null
+        );
+        /* 若本页由弹窗打开，3 秒后尝试自动关闭；否则保留下方按钮 */
+        if (window.opener && !window.opener.closed) {
+          var left = 3;
+          var timer = setInterval(function () {
+            left -= 1;
+            foot.innerHTML = "" + left + " 秒后自动关闭本页…";
+            if (left <= 0) {
+              clearInterval(timer);
+              window.close();
+              foot.innerHTML = "若本页未自动关闭，请点上方「返回 WorkBuddy 继续」。";
+            }
+          }, 1000);
+          foot.innerHTML = "3 秒后自动关闭本页…";
+        }
+      } else {
+        render(
+          "idle",
+          "此页用于接收授权结果",
+          "This page receives the authorization result",
+          "请从 WorkBuddy 应用内发起授权，平台会带着凭证自动跳转回本页。直接访问本页不代表已授权。",
+          state ? "state: " + state : null
+        );
+        returnBtn.style.display = "none";
+      }
+
+      returnBtn.addEventListener("click", function () {
+        if (window.opener && !window.opener.closed) {
+          window.close();
+        } else {
+          window.location.href = "../../index.html";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
