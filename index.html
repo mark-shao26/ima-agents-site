@@ -90,23 +90,33 @@
       </div>
     </section>
 
-    <!-- ============ 项目亮点 ============ -->
-    <section class="section" id="highlights">
+    <!-- ============ 可复核 ============ -->
+    <section class="section" id="sample">
       <div class="container">
-        <h2 class="section__title" data-i18n="hl.title">为什么是这套 Agent 矩阵</h2>
-        <div class="grid grid--3">
-          <article class="card">
-            <h3 data-i18n="hl1.t">统一专业底座</h3>
-            <p data-i18n="hl1.p">所有智能体共享同一套财税知识底座，口径一致，避免通用模型的漂移与幻觉。</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="hl2.t">行业纵深定制</h3>
-            <p data-i18n="hl2.p">按电商、餐饮、民办学校、银行的科目与报表定制，不做泛泛问答。</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="hl3.t">多模型交叉验证</h3>
-            <p data-i18n="hl3.p">同题 benchmark 横向对比主流大模型，持续校准专业口径。</p>
-          </article>
+        <h2 class="section__title" data-i18n="sp.title">把经验，写成规则</h2>
+        <p class="section__sub" data-i18n="sp.sub">通用模型给出一个答案；本系统给出一个可被复核的结论。</p>
+
+        <div class="levels">
+          <div class="level"><span class="level__no">L1</span><strong data-i18n="sp.l1t">能问答</strong><span data-i18n="sp.l1d">单库问答</span></div>
+          <div class="level"><span class="level__no">L2</span><strong data-i18n="sp.l2t">有知识</strong><span data-i18n="sp.l2d">多库 + 行业模块</span></div>
+          <div class="level"><span class="level__no">L3</span><strong data-i18n="sp.l3t">可执行</strong><span data-i18n="sp.l3d">规则 + 路由</span></div>
+          <div class="level"><span class="level__no">L4</span><strong data-i18n="sp.l4t">可验证</strong><span data-i18n="sp.l4d">代码复核</span></div>
+          <div class="level level--top"><span class="level__no">L5</span><strong data-i18n="sp.l5t">跨制度重建</strong><span data-i18n="sp.l5d">模型矩阵</span></div>
+        </div>
+
+        <div class="gates">
+          <div class="gate">
+            <h3 data-i18n="sp.g1t">闸门一 · 数字</h3>
+            <p data-i18n="sp.g1p">所有数字由程序计算；模型不参与计算，仅负责表述。</p>
+          </div>
+          <div class="gate">
+            <h3 data-i18n="sp.g2t">闸门二 · 一致性</h3>
+            <p data-i18n="sp.g2p">同一问题重复询问，结论一致——由结构保证，而非概率。</p>
+          </div>
+          <div class="gate">
+            <h3 data-i18n="sp.g3t">闸门三 · 表达</h3>
+            <p data-i18n="sp.g3p">结论、口径、数字均已锁定；模型仅承担转述。</p>
+          </div>
         </div>
       </div>
     </section>
@@ -116,6 +126,15 @@
       <div class="container">
         <h2 class="section__title" data-i18n="agents.title">智能体一览</h2>
         <p class="section__sub" data-i18n="agents.sub">点击任意一行展开详情，入口链接在详情内。</p>
+        <p class="role-row">
+          <span data-i18n="ag.role">按角色找：</span>
+          <a href="#agent-aicfo" data-i18n="ag.r1">企业主</a>
+          <a href="#agent-ecom" data-i18n="ag.r2">电商</a>
+          <a href="#agent-restaurant" data-i18n="ag.r3">餐饮</a>
+          <a href="#agent-school" data-i18n="ag.r4">学校</a>
+          <a href="#agent-bank" data-i18n="ag.r5">银行</a>
+          <a href="#agent-risk" data-i18n="ag.r6">内控</a>
+        </p>
 
         <div class="agents">
 
@@ -475,28 +494,28 @@
         <h2 class="section__title" data-i18n="faq.title">常见问题</h2>
         <div class="faq">
           <details class="faq__item">
-            <summary data-i18n="faq.q1">这些 Agent 是免费的吗？</summary>
-            <p data-i18n="faq.a1">目前免费开放，点任意卡片中的入口链接即可开始。</p>
+            <summary data-i18n="faq.q1">我的财务数据会被泄露吗？</summary>
+            <p data-i18n="faq.a1">建议隐去真实名称与金额，用脱敏后的案例提问。上传报表前，先删掉客户名单、身份证号、银行账号这类能直接识别到人的字段。</p>
           </details>
           <details class="faq__item">
-            <summary data-i18n="faq.q2">和直接问通用大模型有什么区别？</summary>
-            <p data-i18n="faq.a2">通用模型缺行业纵深且易漂移。本矩阵以 10 年 CFO 经验为底座，经多平台 benchmark 同题横评校准。</p>
+            <summary data-i18n="faq.q2">这些回答会不会是 AI 编的？</summary>
+            <p data-i18n="faq.a2">知识库由我本人整理与签署，模型只做检索与组织，不新增事实。缺数据时它会向你要，而不是猜；涉及金额与比例的结论，都会标注口径和待补数据。</p>
           </details>
           <details class="faq__item">
-            <summary data-i18n="faq.q3">A 方式和 B 方式有什么区别？</summary>
-            <p data-i18n="faq.a3">A：仅围绕知识库回答，快、幻觉低；B：可配 MCP/Skill、生成 PDF/Word 报告、可存记忆。</p>
+            <summary data-i18n="faq.q3">和直接问通用大模型有什么区别？</summary>
+            <p data-i18n="faq.a3">差别集中在一件事：先定口径，再算数。同一组数换口径，结论可能相反——首页 CASE 003 就是例子。通用模型往往直接给结论，不会先问你分母是什么。</p>
           </details>
           <details class="faq__item">
-            <summary data-i18n="faq.q4">我的财务数据会被泄露吗？</summary>
-            <p data-i18n="faq.a4">建议隐去真实名称与金额，用脱敏后的案例提问。</p>
+            <summary data-i18n="faq.q4">为什么有的智能体能生成报告，有的只回答问题？</summary>
+            <p data-i18n="faq.a4">接入方式不同。只用知识库的模式回答快、幻觉低；接入 Skill / MCP 后可以生成 PDF、Word 报告，也能记住你的偏好。每个智能体的详情里标了它接的是哪种。</p>
           </details>
           <details class="faq__item">
-            <summary data-i18n="faq.q5">可以定制我自己行业的智能体吗？</summary>
-            <p data-i18n="faq.a5">可以。底座支持按行业衍生，欢迎通过底部联系方式沟通。</p>
+            <summary data-i18n="faq.q5">这些 Agent 是免费的吗？</summary>
+            <p data-i18n="faq.a5">目前免费开放，点任意卡片中的入口链接即可开始。</p>
           </details>
           <details class="faq__item">
-            <summary data-i18n="faq.q6">这些回答会不会是 AI 编的？</summary>
-            <p data-i18n="faq.a6">知识库由我本人整理与签署，模型只做检索与组织，不新增事实。缺数据时它会向你要，而不是猜；涉及金额与比例的结论，都会标注口径和待补数据。</p>
+            <summary data-i18n="faq.q6">可以定制我自己行业的智能体吗？</summary>
+            <p data-i18n="faq.a6">可以。底座支持按行业衍生，欢迎通过底部联系方式沟通。</p>
           </details>
         </div>
       </div>
