@@ -88,6 +88,23 @@
     });
   });
 
+  /* 锚点直达某个智能体时，自动展开详情 */
+  function openAgentFromHash() {
+    var h = window.location.hash;
+    if (!h || h.indexOf("#agent-") !== 0) return;
+    var agent = document.getElementById(h.slice(1));
+    if (!agent || !agent.classList.contains("agent")) return;
+    if (!agent.classList.contains("open")) {
+      var row = agent.querySelector(".agent__row");
+      if (row) {
+        agent.classList.add("open");
+        row.setAttribute("aria-expanded", "true");
+      }
+    }
+  }
+  openAgentFromHash();
+  window.addEventListener("hashchange", openAgentFromHash);
+
   /* Hero 标题逐字浮现（语言切换后重建） */
   function splitHeroTitle() {
     if (reducedMotion) return;

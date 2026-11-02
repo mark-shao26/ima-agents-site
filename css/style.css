@@ -25,7 +25,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 
 body {
   font-family: var(--font-body);
@@ -1459,3 +1459,58 @@ code {
 }
 .calc[open] > summary::before { content: "－"; }
 .calc__inner { padding-top: 12px; }
+
+/* ---------- 可复核证据块（首页第 2 屏） ---------- */
+.levels {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 900px;
+  margin: 44px auto 0;
+}
+.level {
+  display: grid;
+  gap: 4px;
+  padding: 16px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: rgba(30, 25, 41, 0.72);
+  text-align: center;
+}
+.level__no {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-light);
+}
+.level strong { font-size: 15px; color: var(--color-text); }
+.level span:last-child { font-size: 12px; color: var(--color-text-dim); }
+.level--top { border-color: var(--color-primary); }
+
+.gates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+.gate {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: rgba(30, 25, 41, 0.72);
+}
+.gate h3 { font-size: 15px; color: var(--color-primary-light); margin-bottom: 8px; }
+.gate p { font-size: 14px; line-height: 1.7; color: var(--color-text-dim); }
+
+@media (max-width: 720px) {
+  .levels { grid-template-columns: 1fr; gap: 8px; }
+  .level {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-align: left;
+  }
+  .level__no { min-width: 26px; }
+  .level span:last-child { margin-left: auto; }
+  .gates { grid-template-columns: 1fr; }
+}
