@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AICFO 真实业务案例：餐饮获客成本测算、现金流预警、成本管控与估值判断。每个案例给出问题、判断、依据与建议动作。" />
+  <title>案例库｜AICFO AI财务总监</title>
+  <link rel="canonical" href="https://mark-shao26.github.io/ima-agents-site/cases.html" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/600.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css" />
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav__brand" href="index.html">
+        <span class="nav__title">邵奇 AICFO · Agents</span>
+      </a>
+      <div class="nav__right">
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="index.html#overview">概览</a></li>
+          <li><a href="index.html#agents">智能体</a></li>
+          <li><a href="cases.html">案例</a></li>
+          <li><a href="index.html#experts">专家</a></li>
+          <li><a href="index.html#guide">使用指南</a></li>
+          <li><a href="index.html#knowledge">知识库</a></li>
+          <li><a href="index.html#contact">联系</a></li>
+          <li><a class="nav__cta" href="index.html#agents">立即体验</a></li>
+        </ul>
+        <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__eyebrow">CASES</p>
+        <h1>真实的财务问题，怎么被一步步判出来</h1>
+        <p class="lead">以下案例以具体决策问题为起点，给出结论、量化依据与执行条件。涉及真实企业的案例已作类型化处理，不含可识别信息；标注「模拟测算」者，成本与费率参数为示例。</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+
+        <div class="case-group">
+          <h2 class="case-group__title">一、经营决策</h2>
+          <p class="case-group__sub">一个预算批不批，取决于数据用的是哪个口径。</p>
+          <div class="case-list">
+            <article class="case">
+              <div class="case__meta">
+                <span class="case__no">CASE 001</span>
+                <span>餐饮连锁 · 获客经济性</span>
+                <span>决策人：企业主 / 总经理</span>
+                <span class="case__tagline">模拟测算</span>
+                <span>可信度：需复核</span>
+              </div>
+
+              <h3 class="case__title">这个加投方案，报表说赚 6 倍，实际只赚 2 倍</h3>
+              <p class="case__sub">报表 ROAS 6.24 → 首单贡献口径 2.05；差额来自未核销订单与食材成本。判定：不予通过。</p>
+
+              <div class="kpis">
+                <div class="kpi"><span class="kpi__num">6.24</span><span class="kpi__lab">报表上看到的回报倍数<span class="kpi__term">ROAS（成交额口径）</span></span></div>
+                <div class="kpi"><span class="kpi__num">2.05</span><span class="kpi__lab">扣掉没核销和食材后的真实回报<span class="kpi__term">首单贡献口径</span></span></div>
+                <div class="kpi"><span class="kpi__num">19.65 元</span><span class="kpi__lab">卖一份套餐真正赚多少钱<span class="kpi__term">单份贡献毛利</span></span></div>
+              </div>
+
+              <div class="verdict">
+                <span class="verdict__label">结论</span>
+                <span class="verdict__text">8 万元的加投不能批。先把「每来一个新客到底花多少钱」算清楚，再谈加预算。</span>
+              </div>
+
+              <ul class="actions">
+                  <li>抖音先加到 6 万，观察 7–14 天；单个新客成本超过 19.66 元就停止加投。</li>
+                  <li>美团只做 1 万元试投，不要一次性上 3 万。</li>
+                  <li>向平台导出三个数：抖音去重新客数、90 天新客复购率、本月可用营销预算。</li>
+              </ul>
+
+              <details class="calc">
+                <summary>展开测算过程（给财务看）</summary>
+                <div class="calc__inner">
+                  <div class="pair">
+                    <div class="pair__col"><h4>业务背景</h4><p>3 家连锁快餐门店，客单价约 40 元。抖音团购月投放 5 万元（含达人佣金），售出 8,000 份 39 元套餐（原价 49 元），核销率约 65%；平台抽佣 8%、食材 15 元/份、包装 1 元/份、支付手续费 0.6%。美团月投放 2 万元，新增客户约 1,200 人。</p></div>
+                    <div class="pair__col"><h4>决策诉求</h4><p>管理层拟将抖音提至 8 万元、美团提至 3 万元，要求评估可行性并测算两渠道获客成本。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项一</h4><p>报表回报率能否直接用于预算决策？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>不能。6.24 按成交额计（8,000×39÷50,000），未剔除未核销；核销口径重算 4.06（5,200×39÷50,000）；再扣商品与平台费用后首单贡献仅 <strong>2.05 倍</strong>（102,257÷50,000），与报表差 3.05 倍。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项二</h4><p>抖音获客成本是多少？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>暂不可计算。50,000÷5,200=9.62 元是「每核销一份」的投放成本，分母为份数而非去重新客数，不能作为 CAC 使用。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项三</h4><p>能否以美团作为跨渠道基准？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>部分可用。美团 CAC=20,000÷1,200=<strong>16.67 元/客</strong>；其客单价与抽佣口径未提供，单位贡献 19.65 元不可套用。</p></div>
+                  </div>
+                  <div class="case__gap"><strong>数据缺口：</strong>抖音去重新客数、90 天新客复购率、月度可用营销预算。补齐前结论标「需复核」；补齐后需重出结论卡。</div>
+                </div>
+              </details>
+            </article>
+
+            <article class="case">
+              <div class="case__meta">
+                <span class="case__no">CASE 002</span>
+                <span>家居用品电商 · 广告投放口径</span>
+                <span>决策人：运营负责人 / 财务负责人</span>
+                <span class="case__tagline">已类型化</span>
+                <span>可信度：需复核</span>
+              </div>
+
+              <h3 class="case__title">广告回报 3.11，看着赚钱，其实是赔的</h3>
+              <p class="case__sub">保本线在两种口径下分别是 2.15 与 5.60，3.11 恰好落在中间——加投结论因此反转。</p>
+
+              <div class="kpis">
+                <div class="kpi"><span class="kpi__num">3.11</span><span class="kpi__lab">现在的广告回报（净收入口径）<span class="kpi__term">实际 ROAS</span></span></div>
+                <div class="kpi"><span class="kpi__num">2.15</span><span class="kpi__lab">只算货品成本时的保本线<span class="kpi__term">毛利率口径保本 ROAS</span></span></div>
+                <div class="kpi"><span class="kpi__num">5.60</span><span class="kpi__lab">算上平台佣金和快递包装后的保本线<span class="kpi__term">边际贡献口径保本 ROAS</span></span></div>
+              </div>
+
+              <div class="verdict">
+                <span class="verdict__label">结论</span>
+                <span class="verdict__text">现在不该加投。3.11 只够覆盖货品成本，不够覆盖佣金和履约——这两项吃掉近三成收入。</span>
+              </div>
+
+              <ul class="actions">
+                  <li>统一用「边际贡献」这一把尺子评估所有投放，不再用毛利率口径。</li>
+                  <li>把 ROAS ≥ 5.60 定为加投门槛，低于这个数只维持、不追加。</li>
+                  <li>优先压履约成本（占收入 19.64%）或提高客单价，把保本线从 5.60 拉下来。</li>
+              </ul>
+
+              <details class="calc">
+                <summary>展开测算过程（给财务看）</summary>
+                <div class="calc__inner">
+                  <div class="pair">
+                    <div class="pair__col"><h4>业务背景</h4><p>某家居用品电商，单件净收入 2.80（已扣平台优惠），货品成本 1.50，平台佣金 0.25（占净收入 8.93%），履约与包材 0.55（占净收入 19.64%），广告费 0.90 对应 GMV 4.20。企业以「ROAS 3.11 已超过保本线 2.15」为由，拟追加投放。</p></div>
+                    <div class="pair__col"><h4>决策诉求</h4><p>3.11 的 ROAS 是否已实现盈利，能否加投。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项一</h4><p>按毛利率口径，3.11 是否已盈利？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>是。毛利率=(2.80−1.50)÷2.80=<strong>46.43%</strong>；保本 ROAS=1÷46.43%=<strong>2.15</strong>；3.11>2.15，账面成立。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项二</h4><p>按边际贡献口径，3.11 是否已盈利？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>否。投前边际贡献率=(2.80−1.50−0.25−0.55)÷2.80=<strong>17.86%</strong>；保本 ROAS=1÷17.86%=<strong>5.60</strong>；3.11<5.60，广告费尚未被完全覆盖。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项三</h4><p>两个口径为何相差 2.6 倍？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>毛利率只扣货品成本，未扣佣金与履约。佣金率 8.93%＋履约率 19.64%＝<strong>28.57%</strong>，直接吃掉近三成收入——这正是两条保本线 2.15 与 5.60 的差额来源。</p></div>
+                  </div>
+                  <div class="case__gap"><strong>数据缺口：</strong>去重买家数（用于计算 CAC，现仅有订单量）、退货原因分布、分渠道 ROI、复购率。补齐前结论标「需复核」。</div>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+
+        <div class="case-group">
+          <h2 class="case-group__title">二、现金流与资金链</h2>
+          <p class="case-group__sub">账面现金和真正能用的现金，是两回事。</p>
+          <div class="case-list">
+            <article class="case">
+              <div class="case__meta">
+                <span class="case__no">CASE 003</span>
+                <span>服饰电商 · 现金流与投资可行性</span>
+                <span>决策人：企业主 / 财务负责人</span>
+                <span class="case__tagline">已类型化</span>
+                <span>可信度：需复核</span>
+              </div>
+
+              <h3 class="case__title">账上 1.2 亿现金，实际只能撑 1.43 个月</h3>
+              <p class="case__sub">可动用现金 4,000 万，一年内到期债务 6,000 万；平台与客户占住的资金达 54.2%。</p>
+
+              <div class="kpis">
+                <div class="kpi"><span class="kpi__num">1.43 个月</span><span class="kpi__lab">账上的钱真正能撑多久<span class="kpi__term">可动用现金覆盖月数</span></span></div>
+                <div class="kpi"><span class="kpi__num">−0.375</span><span class="kpi__lab">赚的钱够不够还债（健康值 ≥1.5）<span class="kpi__term">DSCR 偿债覆盖率</span></span></div>
+                <div class="kpi"><span class="kpi__num">54.2%</span><span class="kpi__lab">被平台和客户占住、动不了的钱<span class="kpi__term">受限资金占比</span></span></div>
+              </div>
+
+              <div class="verdict">
+                <span class="verdict__label">结论</span>
+                <span class="verdict__text">5,000 万的建仓与主播签约不能做。当务之急是止血，不是扩张。</span>
+              </div>
+
+              <ul class="actions">
+                  <li>立即暂停建仓、主播签约等资本性支出。</li>
+                  <li>重做现金预算：把保证金、在途货款、储值预收从「可用现金」里剔除出去。</li>
+                  <li>现金覆盖月数做到 3 个月以上，再回来谈这 5,000 万。</li>
+                  <li>签约主播前先算单场保本 ROI 与退货后净利。</li>
+              </ul>
+
+              <details class="calc">
+                <summary>展开测算过程（给财务看）</summary>
+                <div class="calc__inner">
+                  <div class="pair">
+                    <div class="pair__col"><h4>业务背景</h4><p>账面货币资金 12,000 万元，其中平台保证金 3,000 万元、在途货款 3,500 万元、会员储值及预售 1,500 万元；月均支出 2,800 万元。上年度经营现金流净额 −1,500 万元，核心经营亏损 −1,200 万元；一年内到期有息负债 6,000 万元。</p></div>
+                    <div class="pair__col"><h4>决策诉求</h4><p>5,000 万元投资计划（建仓＋签约头部主播）是否可执行；现有现金能否支撑。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项一</h4><p>账面 12,000 万现金能否支撑该投资？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>不能。可动用现金=12,000−3,000−3,500−1,500=<strong>4,000 万元</strong>；覆盖月数=4,000÷2,800=<strong>1.43 个月</strong>，低于 1.5 个月红色警戒线，远低于 3 个月健康线。保证金为平台押金、在途货款未结算、储值预收属客户负债，均不可自由支配。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项二</h4><p>经营本身是否具备自我造血能力？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>不具备。经营现金流 −1,500 万元与核心经营亏损 −1,200 万元相互印证；DSCR=−1,500÷4,000=<strong>−0.375</strong>（经营现金流对一年内到期债务口径），健康线 ≥1.5。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项三</h4><p>平台资金占用是否处于可控区间？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>不可控。受限资金占比=(3,000+3,500)÷12,000=<strong>54.2%</strong>，健康线 ≤20%。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项四</h4><p>短期债务是否构成叠加压力？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>构成。一年内到期有息负债 6,000 万元，为可动用现金 4,000 万元的 1.5 倍，存在 <strong>2,000 万元</strong>敞口。</p></div>
+                  </div>
+                  <div class="case__gap"><strong>数据缺口：</strong>营收规模与毛利结构、5,000 万元投资分项预算、主播签约保底与分成条款、库存周转天数、退货率。补齐前结论标「需复核」。</div>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+
+        <div class="case-group">
+          <h2 class="case-group__title">三、内控诊断</h2>
+          <p class="case-group__sub">内控结论必须落到具体科目，不能停在「建议加强管理」。</p>
+          <div class="case-list">
+            <article class="case">
+              <div class="case__meta">
+                <span class="case__no">CASE 004</span>
+                <span>环保工程 · 内控有效性</span>
+                <span>决策人：CFO / 审计委员会</span>
+                <span class="case__tagline">已类型化</span>
+                <span>可信度：需复核</span>
+              </div>
+
+              <h3 class="case__title">一家十亿级环保企业：账面在赚钱，钱其实收不回来</h3>
+              <p class="case__sub">应收与合同资产占总资产 69.8%，账龄两年以上占 58%，内控初评 84 分、等级 A。</p>
+
+              <div class="kpis">
+                <div class="kpi"><span class="kpi__num">69.8%</span><span class="kpi__lab">公司七成资产是「还没收到的钱」<span class="kpi__term">应收+合同资产/总资产</span></span></div>
+                <div class="kpi"><span class="kpi__num">58%</span><span class="kpi__lab">其中两年以上仍未收回的<span class="kpi__term">账龄 2 年以上占比</span></span></div>
+                <div class="kpi"><span class="kpi__num">30.16%</span><span class="kpi__lab">已计提的坏账比例（一年内从个位数跳上来）<span class="kpi__term">坏账准备计提比例</span></span></div>
+              </div>
+
+              <div class="verdict">
+                <span class="verdict__label">结论</span>
+                <span class="verdict__text">问题不在制度，在资产。制度都写在纸上，真正卡住公司的是收不回来的账。</span>
+              </div>
+
+              <ul class="actions">
+                  <li>把两年以上的应收逐笔列出来，重算坏账准备够不够。</li>
+                  <li>合同资产按项目进度和结算条件逐项核对，区分「还没到结算期」和「实质收不回」。</li>
+                  <li>已起诉的应收单独建台账，跟踪执行与回款。</li>
+                  <li>长期借款对照还款计划与经营现金流的覆盖倍数。</li>
+              </ul>
+
+              <details class="calc">
+                <summary>展开测算过程（给财务看）</summary>
+                <div class="calc__inner">
+                  <div class="pair">
+                    <div class="pair__col"><h4>业务背景</h4><p>环保工程类企业，营收连续两年下滑并转为亏损；长期借款规模翻倍，存在多起诉讼追偿应收款；治理层为董事长与总经理分设，董事会 9 人含独立董事 3 人。</p></div>
+                    <div class="pair__col"><h4>决策诉求</h4><p>判断内控失效环节在制度层还是执行层，是否需要启动外部专项审计，以及整改优先顺序。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项一</h4><p>失效应归因于制度缺失还是资产质量？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>归因于资产端。按 100 − 8 个风险点 × 2 分 = <strong>84 分</strong>，缺陷等级 A、登记 5 条风险条目；治理结构形式完备（独董 3/9），风险未在治理层收敛，而集中于应收与合同资产的确认与计量。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项二</h4><p>减值准备是否充分？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>需重新验证。应收与合同资产合计占总资产 <strong>69.8%</strong>，其中账龄 2 年以上占 <strong>58%</strong>；坏账准备计提比例由个位数骤升至 <strong>30.16%</strong>，计提节奏与账龄迁徙不匹配，须逐笔复核充分性。</p></div>
+                  </div>
+                  <div class="pair">
+                    <div class="pair__col"><h4>判断事项三</h4><p>合同资产的可回收性如何确认？</p></div>
+                    <div class="pair__col"><h4>处理</h4><p>不能按余额整体判断。须按履约进度与结算条件逐项目核验：已完成未结算部分核对验收单据，已结算未回款部分核对账期与诉讼进展，区分「时点差异」与「实质减值」。</p></div>
+                  </div>
+                  <div class="case__gap"><strong>数据缺口：</strong>原始记录仅有占比与趋势，缺营收、净利润、应收余额的绝对金额。等级判定在绝对金额补齐后需复核；诊断报告 55 页，执行与回收情况未记录。</div>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+
+        <div class="case-group">
+          <h2 class="case-group__title">四、方法论对照</h2>
+          <p class="case-group__sub">同一决策问题，两类模型在口径校验与可执行性上的差异。</p>
+          <div class="case-list">
+            <article class="case case--empty">
+              <div class="case__meta">
+                <span class="case__no">CASE 005</span>
+                <span>方法论对照</span>
+                <span class="case__tagline">待补充</span>
+              </div>
+              <table class="cmp">
+                <thead>
+                  <tr><th style="width:24%">决策问题</th><th>通用大模型通常给什么</th><th>AICFO 给什么</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>广告要不要加投</td>
+                    <td class="bad">"ROAS 3.11 已超过保本线 2.15，建议加大投入。"</td>
+                    <td class="good">"2.15 是毛利率口径；按边际贡献率 17.86% 算，保本线是 5.60，3.11 还没回本。"</td>
+                  </tr>
+                  <tr>
+                    <td>现金能否支撑投资</td>
+                    <td class="bad">"账面现金 12,000 万，相对充裕，可支撑 5,000 万投资。"</td>
+                    <td class="good">"可动用只有 4,000 万，覆盖 1.43 个月；受限资金占 54.2%。"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p style="margin-top:16px;font-size:13px;color:var(--color-text-dim);">注：左列为通用模型的典型输出归纳，非特定产品实测引用；上线前需以 benchmark 原始记录替换。</p>
+            </article>
+          </div>
+        </div>
+
+        <p class="case-note">
+          口径说明：标「模拟测算」者按真实业务结构构造，参数为示例；标「已类型化」者已去除可识别企业的名称、金额与事件，仅保留结构与比例。原始诊断报告不对外公开。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span id="year">2026</span> 邵奇 AICFO · 基于 ima 平台构建</p>
+      <a href="#top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    /* 移动端菜单 */
+    var toggle = document.getElementById("navToggle");
+    var menu = document.getElementById("navMenu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+    }
+
+    /* 入场动画 */
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".case").forEach(function (el) {
+        el.classList.add("reveal");
+        io.observe(el);
+      });
+    }
+
+    /* 鼠标光晕 */
+    var glow = document.getElementById("cursorGlow");
+    if (glow && window.matchMedia("(pointer: fine)").matches) {
+      var tx = -999, ty = -999, cx = -999, cy = -999, shown = false;
+      window.addEventListener("mousemove", function (e) {
+        tx = e.clientX; ty = e.clientY;
+        if (!shown) { shown = true; glow.classList.add("is-on"); cx = tx; cy = ty; }
+      });
+      (function follow() {
+        cx += (tx - cx) * 0.12;
+        cy += (ty - cy) * 0.12;
+        glow.style.transform = "translate(" + (cx - 220) + "px," + (cy - 220) + "px)";
+        requestAnimationFrame(follow);
+      })();
+    }
+  </script>
+</body>
+</html>
