@@ -176,17 +176,19 @@
   var statNums = document.querySelectorAll(".hero__stats strong");
   function countUp(el) {
     var text = el.textContent;
-    var m = text.match(/^(\d+)(.*)$/);
+    var m = text.match(/^([\d,]+)(.*)$/);
     if (!m) return;
-    var target = parseInt(m[1], 10);
+    var target = parseInt(m[1].replace(/,/g, ""), 10);
+    var hasComma = m[1].indexOf(",") !== -1;
     var suffix = m[2];
     var dur = 1200;
     var start = null;
+    function fmt(n) { return hasComma ? n.toLocaleString("en-US") : String(n); }
     function step(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
+      el.textContent = fmt(Math.round(target * eased)) + suffix;
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);

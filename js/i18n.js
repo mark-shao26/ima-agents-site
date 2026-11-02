@@ -28,6 +28,10 @@
       "hero.s1t": "行业智能体（含法语版）",
       "hero.s2n": "8 个",
       "hero.s2t": "主流大模型横评",
+      "hero.s3n": "6 个",
+      "hero.s3t": "知识库",
+      "hero.s4n": "4,235 条",
+      "hero.s4t": "知识库条目",
 
       "hl.title": "为什么是这套 Agent 矩阵",
       "hl1.t": "统一专业底座",
@@ -262,6 +266,10 @@
       "hero.s1t": "Industry agents (incl. French)",
       "hero.s2n": "8",
       "hero.s2t": "Mainstream LLMs benchmarked",
+      "hero.s3n": "6",
+      "hero.s3t": "Knowledge bases",
+      "hero.s4n": "4,235",
+      "hero.s4t": "Knowledge base entries",
 
       "hl.title": "Why This Agent Matrix",
       "hl1.t": "A Unified Professional Core",
