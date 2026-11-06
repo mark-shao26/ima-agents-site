@@ -1,0 +1,591 @@
+/* ==========================================================
+   中 / 英 双语切换：字典 + 应用逻辑
+   无依赖，选择存入 localStorage（键：site-lang）
+   ========================================================== */
+(function () {
+  "use strict";
+
+  var DICT = {
+    zh: {
+      "meta.title": "邵奇 AICFO 智能体矩阵 | ima Agents",
+      "meta.desc": "邵奇 AICFO 及其行业衍生智能体矩阵 —— 基于 ima 平台的财税合规 AI Agent 展示",
+      "nav.overview": "概览",
+      "nav.agents": "智能体",
+      "nav.guide": "使用指南",
+      "nav.knowledge": "知识库",
+      "nav.demo": "演示",
+      "nav.contact": "联系",
+      "nav.cta": "立即体验",
+      "nav.menuOpen": "打开菜单",
+      "nav.menuClose": "关闭菜单",
+
+      "hero.eyebrow": "基于 ima·copilot 的财、税、法、合规 AI Agent 矩阵",
+      "hero.title": "10 年 CFO 判断，<br />沉淀为<span class=\"accent\">可对话的智能体</span>",
+      "hero.lead": "不做通用问答，只做有口径的财务判断：按行业科目与报表建模，按「结论—解释—依据」作答，缺数据时向你求证、不作臆断。",
+      "hero.btn1": "浏览全部智能体",
+      "hero.btn2": "查看演示",
+      "hero.s1n": "6 个",
+      "hero.s1t": "行业智能体（含法语版）",
+      "hero.s2n": "8 个",
+      "hero.s2t": "主流大模型横评",
+      "hero.s3n": "6 个",
+      "hero.s3t": "知识库",
+      "hero.s4n": "4,235 条",
+      "hero.s4t": "知识库条目",
+
+      "sp.title": "把经验，写成规则",
+      "sp.sub": "通用模型给出一个答案；本系统给出一个可被复核的结论。",
+      "sp.l1t": "能问答",
+      "sp.l1d": "单库问答",
+      "sp.l2t": "有知识",
+      "sp.l2d": "多库 + 行业模块",
+      "sp.l3t": "可执行",
+      "sp.l3d": "规则 + 路由",
+      "sp.l4t": "可验证",
+      "sp.l4d": "代码复核",
+      "sp.l5t": "跨制度重建",
+      "sp.l5d": "模型矩阵",
+      "sp.g1t": "闸门一 · 数字",
+      "sp.g1p": "所有数字由程序计算；模型不参与计算，仅负责表述。",
+      "sp.g2t": "闸门二 · 一致性",
+      "sp.g2p": "同一问题重复询问，结论一致——由结构保证，而非概率。",
+      "sp.g3t": "闸门三 · 表达",
+      "sp.g3p": "结论、口径、数字均已锁定；模型仅承担转述。",
+      "ag.role": "按角色找：",
+      "ag.r1": "企业主",
+      "ag.r2": "电商",
+      "ag.r3": "餐饮",
+      "ag.r4": "学校",
+      "ag.r5": "银行",
+      "ag.r6": "内控",
+
+      "nav.cases": "案例",
+      "nav.experts": "专家",
+      "ex.caption": "另附 · WorkBuddy 应用中可直接调用的专家列表（共 18 位）",
+      "ex.th1": "分类",
+      "ex.th2": "专家",
+
+      "ex.c1": "现金流与风控",
+      "ex.c2": "经营与预算",
+      "ex.c3": "审计与舞弊",
+      "ex.c4": "投资与尽调",
+      "ex.c5": "行业专题",
+      "ex.c6": "治理与个人",
+      "ex.e1": "现金流跑道-资金链预警与压力测试",
+      "ex.e2": "风控经理-财务风险预警与监测",
+      "ex.e3": "企业CFO财务决策顾问",
+      "ex.e4": "经营决策-风险与路径推演",
+      "ex.e5": "预算绩效管理与决算",
+      "ex.e6": "采购流程-不相容岗位与资产台账",
+      "ex.e7": "审计师-减值判断与底稿支撑",
+      "ex.e8": "企业反舞弊调查顾问-财务造假识别",
+      "ex.e9": "月末结账-对账差错与审计应对",
+      "ex.e10": "投行分析师-财务尽调穿透",
+      "ex.e11": "VC/PE投资人-H3标的评估",
+      "ex.e12": "餐厅财务税务法务顾问",
+      "ex.e13": "网店财务税务法务顾问",
+      "ex.e14": "学校财务与招生顾问",
+      "ex.e15": "行政事业单位财务核算",
+      "ex.e16": "基建财务与竣工决算",
+      "ex.e17": "董事会秘书-信息披露与合规",
+      "ex.e18": "买房租房-月供与家庭资产测算",
+
+      "agents.title": "智能体一览",
+      "agents.sub": "点击任意一行展开详情，入口链接在详情内。",
+      "agents.badge": "行业智能体",
+      "col.features": "功能与核心能力",
+      "col.scene": "适用场景",
+      "col.use": "使用方式",
+
+      "a1.badge": "能力底座",
+      "a1.brief": "算钱 · 判风险 · 给建议",
+      "a1.tag": "把 10 年 CFO 判断经验变成可调用的 AI 思维 · 低幻觉 · 可提问或上传报表 · DCF / ROIC / WACC / NPV / 敏感分析 / 估值 / 风险监控 / 盈亏平衡",
+      "a1.meta": "沉淀 397 条知识",
+      "a1.can": "✔ 能做",
+      "a1.can1": "<strong>算钱</strong>：现金流、投资回报、估值、预算偏差",
+      "a1.can2": "<strong>判风险</strong>：盈利质量、偿债能力、断流预警",
+      "a1.can3": "<strong>给建议</strong>：投不投、怎么融资、下一步怎么办",
+      "a1.cant": "✘ 不做",
+      "a1.cant1": "不预测股价、不荐股",
+      "a1.cant2": "不替你签字、不替代专业意见",
+      "a1.cant3": "不编数据——缺数据它会向你要",
+      "a1.scenep": "企业主 / 财务负责人日常财税咨询、重大决策前的合规校验、财务团队能力补充。",
+      "a1.usep": "打开 ima.copilot → 选择知识库「AI CFO」→ 直接输入问题，或上传报表（Excel / PDF 均可）。",
+      "a1.link": "在 ima 中打开「邵奇｜财务模型矩阵｜AI CFO」→",
+
+      "a2.brief": "算账 · 穿透 · 合判 · 获客能力分析",
+      "a2.tag": "算清账 · 穿透业务 · 追溯运营 · 财法合判——放大你的判断力",
+      "a2.meta": "沉淀 191 条知识",
+      "a2.li1": "平台结算单与账务核对逻辑",
+      "a2.li2": "刷单、退款、佣金的财税处理",
+      "a2.li3": "电商行业涉税风险点识别",
+      "a2.scenep": "电商企业财务、多平台店铺经营者、代账机构。",
+      "a2.link": "在 ima 中打开：电商 AI 智能体（财、税、法务）→",
+
+      "a3.brief": "财税法一体军师 · 获客能力分析",
+      "a3.tag": "财务、税务、法务三位一体，餐饮老板的 AI 军师",
+      "a3.meta": "沉淀 362 条知识",
+      "a3.li1": "单店 / 连锁门店损益分析",
+      "a3.li2": "食材成本率、人效等关键指标解读",
+      "a3.li3": "餐饮行业常见税务问题处理",
+      "a3.scenep": "餐饮连锁企业、单店经营者、餐饮财务主管。",
+      "a3.link": "在 ima 中打开：餐饮老板 AI 智能体（财+税+法）→",
+
+      "a4.brief": "学校的智慧大脑",
+      "a4.tag": "懂政策、会算账、能分析——民办学校自己的智慧大脑",
+      "a4.meta": "沉淀 408 条知识",
+      "a4.li1": "民办学校会计制度与科目适配",
+      "a4.li2": "学费收入、生均成本等特有分析报表",
+      "a4.li3": "民办教育合规要点提示",
+      "a4.scenep": "K12 民办学校、教育集团财务负责人、举办者。",
+      "a4.demo": "互动演示：学校财务宇宙 →",
+      "a4.link": "在 ima 中打开：民办学校 AI 智能体 →",
+
+      "a5.brief": "内控体检",
+      "a5.tag": "银行业内控体系诊断 · 风险点排查",
+      "a5.meta": "沉淀 68 条知识",
+      "a5.li1": "银行内控框架梳理与差距分析",
+      "a5.li2": "关键业务条线风险点识别",
+      "a5.li3": "整改建议与制度完善方向",
+      "a5.scenep": "银行内控 / 合规部门、审计机构、咨询顾问。",
+      "a5.link": "在 ima 中打开：银行体系内控诊断智能体 →",
+
+      "a6.brief": "证据分级 · 双重核验",
+      "a6.tag": "证据分级 · 风险溯源 · 双重核验——把 22 年财务判断力，变成 AI 说话前必须先自证的规矩",
+      "a6.meta": "沉淀 212 条知识",
+      "a6.li1": "按业务循环扫描内控薄弱环节",
+      "a6.li2": "风险分级与整改优先级建议",
+      "a6.li3": "输出结构化诊断结论",
+      "a6.scenep": "拟上市 / 拟融资企业、集团内审部门、外部咨询机构。",
+      "a6.linkp": "分享链接即将上线，可先通过底部联系方式获取。",
+
+      "a7.brief": "法语区版本",
+      "a7.meta": "沉淀 405 条知识",
+      "a7.li1": "AICFO 能力底座的法语版本，面向法语区企业与投资者",
+      "a7.li2": "同一套财务判断框架：估值、现金流、风险识别、决策建议",
+      "a7.li3": "跨语言一致的低幻觉问答体验",
+      "a7.scenep": "法语区（欧洲 / 非洲）企业主与财务负责人、跨境投资沟通、中法双语财务团队。",
+      "a7.link": "在 ima 中打开：Matrice Modèles Fin. AICFO →",
+
+      "g.title": "使用指南",
+      "g.sub": "在 ima 中四步上手，全程不超过 1 分钟。",
+      "g.st1t": "进入 ima",
+      "g.st1p": "打开 ima.qq.com，微信扫码登录",
+      "g.st2t": "选知识库",
+      "g.st2p": "点本站任一智能体链接，直达对应知识库",
+      "g.st3t": "提问或上传",
+      "g.st3p": "直接输入问题，或点回形针上传 Excel / PDF 报表",
+      "g.st4t": "追问与分享",
+      "g.st4p": "按「结论—解释—依据」读答案，继续追问或分享结果",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      "g.boundline": "它是决策辅助，不构成投资建议；数据不准，结论就不准；最终拍板的永远是你。",
+      "g.dl": "下载《AICFO 使用说明书》PDF ⤓",
+
+      "kb.title": "持续更新的知识库",
+      "kb.sub": "六个知识库、累计 4,235 条内容，定期采集、持续归档，在 ima 上开放订阅。",
+      "kb.ga": "专业内容库",
+      "kb.gb": "思维模型库",
+      "kb.a1p": "CFO 视角拆解财务、税务与经营管理",
+      "kb.a1m": "收录 916 篇内容",
+      "kb.a2p": "CFO 视角看医药行业的商业逻辑",
+      "kb.a2m": "收录 479 篇内容",
+      "kb.a3p": "让专业能力获得 10 倍增长",
+      "kb.a3m": "收录 2620 篇内容",
+      "kb.b1p": "攻克复杂业务逻辑的思维模型",
+      "kb.b1m": "收录 33 篇内容",
+      "kb.b2p": "不确定时代的抗风险能力",
+      "kb.b2m": "收录 111 篇内容",
+      "kb.b3p": "训练 CFO 式商业判断",
+      "kb.b3m": "收录 76 篇内容",
+      "kb.link": "在 ima 中打开 →",
+
+      "demo.title": "演示",
+      "demo.sub": "一段模拟对话，直观感受 Agent 的提问方式与输出形态。",
+      "demo.badge": "模拟演示",
+      "demo.play": "▶ 播放演示",
+      "demo.replay": "↻ 重新播放",
+      "demo.note": "示例来自《AICFO 使用说明书》，回答为演示模拟，非真实对话记录",
+
+      "faq.title": "常见问题",
+      "faq.q1": "我的财务数据会被泄露吗？",
+      "faq.a1": "建议隐去真实名称与金额，用脱敏后的案例提问。上传报表前，先删掉客户名单、身份证号、银行账号这类能直接识别到人的字段。",
+      "faq.q2": "这些回答会不会是 AI 编的？",
+      "faq.a2": "知识库由我本人整理与签署，模型只做检索与组织，不新增事实。缺数据时它会向你要，而不是猜；涉及金额与比例的结论，都会标注口径和待补数据。",
+      "faq.q3": "和直接问通用大模型有什么区别？",
+      "faq.a3": "差别集中在一件事：先定口径，再算数。同一组数换口径，结论可能相反——首页 CASE 003 就是例子。通用模型往往直接给结论，不会先问你分母是什么。",
+      "faq.q4": "为什么有的智能体能生成报告，有的只回答问题？",
+      "faq.a4": "接入方式不同。只用知识库的模式回答快、幻觉低；接入 Skill / MCP 后可以生成 PDF、Word 报告，也能记住你的偏好。每个智能体的详情里标了它接的是哪种。",
+      "faq.q5": "这些 Agent 是免费的吗？",
+      "faq.a5": "目前免费开放，点任意卡片中的入口链接即可开始。",
+      "faq.q6": "可以定制我自己行业的智能体吗？",
+      "faq.a6": "可以。底座支持按行业衍生，欢迎通过底部联系方式沟通。",
+
+      "ct.title": "联系与合作",
+      "ct.sub": "行业智能体定制、企业内控诊断合作、讲座邀约，欢迎联系。",
+      "ct.wx": "微信",
+      "ct.wxp": "67757008",
+      "ct.mail": "邮箱",
+
+      "ft.copy": "© <span id=\"year\">2026</span> 邵奇 AICFO · 基于 ima 平台构建",
+      "ft.top": "回到顶部 ↑",
+
+      demo: {
+        user: "我们是连锁餐饮，年营收 1.2 亿、净利率 4%，想判断要不要开第 5 家店；请从回报和现金两个角度给结论。",
+        rows: [
+          { label: "结论", tag: ["mid", "需复核"], conclusion: true,
+            text: "建议暂缓开第 5 家店——先修复现有门店的盈利模型，再谈扩张。" },
+          { label: "解释",
+            text: "净利率 4% 低于连锁餐饮 8%–12% 的健康区间，说明单店模型尚未跑通；新店通常有 6–12 个月爬坡期，此时扩张会把利润和现金同时摊薄。" },
+          { label: "依据",
+            text: "年净利润约 480 万（1.2 亿 × 4%）；若新店投入约 200 万、爬坡期月均亏 8 万，首年现金占用约 300 万，相当于全年净利润的 62%——留给安全边际的空间不足。" },
+          { label: "可信度", tag: ["mid", "需复核"],
+            text: "以上基于你提供的两个数字推算；补充单店投资额、月均固定支出后，结论可升级为「高确定」。" }
+        ]
+      }
+    },
+
+    en: {
+      "meta.title": "Shaoqi AICFO Agent Matrix | ima Agents",
+      "meta.desc": "Shaoqi AICFO and its industry-specific AI agents — a finance, tax and compliance agent showcase built on the ima platform",
+      "nav.overview": "Overview",
+      "nav.agents": "Agents",
+      "nav.guide": "User Guide",
+      "nav.knowledge": "Knowledge",
+      "nav.demo": "Demo",
+      "nav.contact": "Contact",
+      "nav.cta": "Try Now",
+      "nav.menuOpen": "Open menu",
+      "nav.menuClose": "Close menu",
+
+      "hero.eyebrow": "An AI Agent Matrix for Finance, Tax, Legal & Compliance on ima·copilot",
+      "hero.title": "A decade of CFO judgment,<br />distilled into <span class=\"accent\">conversational agents</span>",
+      "hero.lead": "Not generic Q&A, but judgment grounded in your industry's accounts and reports: delivered as conclusion–reasoning–evidence, and it asks for missing data instead of guessing.",
+      "hero.btn1": "Explore the Agents",
+      "hero.btn2": "Watch the Demo",
+      "hero.s1n": "6",
+      "hero.s1t": "Industry agents (incl. French)",
+      "hero.s2n": "8",
+      "hero.s2t": "Mainstream LLMs benchmarked",
+      "hero.s3n": "6",
+      "hero.s3t": "Knowledge bases",
+      "hero.s4n": "4,235",
+      "hero.s4t": "Knowledge base entries",
+
+      "sp.title": "Turning Experience into Rules",
+      "sp.sub": "A general model gives you an answer; this system gives you an answer that can be verified.",
+      "sp.l1t": "Answers",
+      "sp.l1d": "Single-library Q&A",
+      "sp.l2t": "Knows",
+      "sp.l2d": "Multi-library + industry modules",
+      "sp.l3t": "Executes",
+      "sp.l3d": "Rules + routing",
+      "sp.l4t": "Verifiable",
+      "sp.l4d": "Code double-check",
+      "sp.l5t": "Rebuilds across regimes",
+      "sp.l5d": "Model matrix",
+      "sp.g1t": "Gate 1 · Numbers",
+      "sp.g1p": "Every figure is computed by program; the model does not calculate — it only conveys.",
+      "sp.g2t": "Gate 2 · Consistency",
+      "sp.g2p": "Ask twice, get the same answer — by structure, not by probability.",
+      "sp.g3t": "Gate 3 · Wording",
+      "sp.g3p": "Conclusions, calibers and figures are locked; the model only conveys.",
+      "ag.role": "Find by role:",
+      "ag.r1": "Business owner",
+      "ag.r2": "E-commerce",
+      "ag.r3": "Restaurants",
+      "ag.r4": "Schools",
+      "ag.r5": "Banking",
+      "ag.r6": "Internal control",
+
+      "nav.cases": "Cases",
+      "nav.experts": "Experts",
+      "ex.caption": "Appendix · All 18 experts available in the WorkBuddy app",
+      "ex.th1": "Category",
+      "ex.th2": "Expert",
+
+      "ex.c1": "Cash & Risk",
+      "ex.c2": "Operations & Budget",
+      "ex.c3": "Audit & Fraud",
+      "ex.c4": "Investment & DD",
+      "ex.c5": "Industry Practice",
+      "ex.c6": "Governance & Personal",
+      "ex.e1": "现金流跑道-资金链预警与压力测试",
+      "ex.e2": "风控经理-财务风险预警与监测",
+      "ex.e3": "企业CFO财务决策顾问",
+      "ex.e4": "经营决策-风险与路径推演",
+      "ex.e5": "预算绩效管理与决算",
+      "ex.e6": "采购流程-不相容岗位与资产台账",
+      "ex.e7": "审计师-减值判断与底稿支撑",
+      "ex.e8": "企业反舞弊调查顾问-财务造假识别",
+      "ex.e9": "月末结账-对账差错与审计应对",
+      "ex.e10": "投行分析师-财务尽调穿透",
+      "ex.e11": "VC/PE投资人-H3标的评估",
+      "ex.e12": "餐厅财务税务法务顾问",
+      "ex.e13": "网店财务税务法务顾问",
+      "ex.e14": "学校财务与招生顾问",
+      "ex.e15": "行政事业单位财务核算",
+      "ex.e16": "基建财务与竣工决算",
+      "ex.e17": "董事会秘书-信息披露与合规",
+      "ex.e18": "买房租房-月供与家庭资产测算",
+
+      "agents.title": "The Agents",
+      "agents.sub": "Click any row to expand details; the entry link is inside.",
+      "agents.badge": "Industry Agent",
+      "col.features": "Key Capabilities",
+      "col.scene": "Who It's For",
+      "col.use": "How to Use",
+
+      "a1.badge": "Core Engine",
+      "a1.tag": "Ten years of CFO judgment turned into callable AI reasoning · Low hallucination · Ask questions or upload reports · DCF / ROIC / WACC / NPV / Sensitivity analysis / Valuation / Risk monitoring / Break-even",
+      "a1.brief": "Numbers · Risks · Advice",
+      "a1.meta": "397 curated entries",
+      "a1.can": "✔ What it does",
+      "a1.can1": "<strong>Run the numbers</strong>: cash flow, ROI, valuation, budget variance",
+      "a1.can2": "<strong>Judge the risks</strong>: earnings quality, solvency, cash-crunch warnings",
+      "a1.can3": "<strong>Give advice</strong>: invest or not, how to finance, what to do next",
+      "a1.cant": "✘ What it won't do",
+      "a1.cant1": "No stock-price predictions, no stock tips",
+      "a1.cant2": "No signing on your behalf, no substitute for professional opinion",
+      "a1.cant3": "No made-up data — it asks you when data is missing",
+      "a1.scenep": "Day-to-day finance & tax questions for owners and CFOs, compliance checks before major decisions, and a capability boost for finance teams.",
+      "a1.usep": "Open ima.copilot → choose the \"AI CFO\" knowledge base → type your question, or upload statements (Excel / PDF).",
+      "a1.link": "Open on ima: Shaoqi | Financial Model Matrix | AI CFO →",
+
+      "a2.tag": "Clear books · See through the business · Trace operations · Finance meets legal — amplifying your judgment",
+      "a2.brief": "Books · Insight · Legal · Acquisition analysis",
+      "a2.meta": "191 curated entries",
+      "a2.li1": "Reconciliation logic for platform settlement statements",
+      "a2.li2": "Tax treatment of order inflation, refunds and commissions",
+      "a2.li3": "Identifying tax-risk points specific to e-commerce",
+      "a2.scenep": "E-commerce finance staff, multi-platform store owners, bookkeeping agencies.",
+      "a2.link": "Open on ima: E-commerce AI Agent (Finance, Tax, Legal) →",
+
+      "a3.tag": "Finance, tax and legal in one — the AI strategist for restaurant owners",
+      "a3.brief": "Finance, tax & legal in one · Acquisition analysis",
+      "a3.meta": "362 curated entries",
+      "a3.li1": "P&L analysis for single stores and chains",
+      "a3.li2": "Reading key metrics: food-cost ratio, labor efficiency",
+      "a3.li3": "Handling common tax issues in the restaurant industry",
+      "a3.scenep": "Restaurant chains, single-store owners, restaurant finance managers.",
+      "a3.link": "Open on ima: Restaurant Owner AI Agent (Finance+Tax+Legal) →",
+
+      "a4.tag": "Knows policy, does the math, runs the analysis — the smart brain for private schools",
+      "a4.brief": "The school\u2019s smart brain",
+      "a4.meta": "408 curated entries",
+      "a4.li1": "Chart of accounts adapted to private-school accounting rules",
+      "a4.li2": "School-specific reports: tuition revenue, cost per student",
+      "a4.li3": "Compliance highlights for private education",
+      "a4.scenep": "K12 private schools, education-group finance leads, school sponsors.",
+      "a4.demo": "Interactive demo: School Financial Universe →",
+      "a4.link": "Open on ima: Private School AI Agent →",
+
+      "a5.tag": "Internal-control diagnostics for banking · Risk-point screening",
+      "a5.brief": "Internal-control checkup",
+      "a5.meta": "68 curated entries",
+      "a5.li1": "Mapping internal-control frameworks and gap analysis",
+      "a5.li2": "Identifying risk points across key business lines",
+      "a5.li3": "Remediation advice and directions for policy improvement",
+      "a5.scenep": "Bank internal-control & compliance teams, audit firms, consultants.",
+      "a5.link": "Open on ima: Banking Internal-Control Diagnostic Agent →",
+
+      "a6.tag": "Evidence grading · Risk tracing · Dual verification — turning 22 years of financial judgment into rules the AI must prove before it speaks",
+      "a6.brief": "Evidence grading · Dual verification",
+      "a6.meta": "212 curated entries",
+      "a6.li1": "Scanning weak points in internal controls by business cycle",
+      "a6.li2": "Risk grading and remediation priorities",
+      "a6.li3": "Structured diagnostic conclusions",
+      "a6.scenep": "Pre-IPO / pre-financing companies, group internal audit, external advisors.",
+      "a6.linkp": "Share link coming soon — reach us via the contact section below.",
+
+      "a7.brief": "Francophone edition",
+      "a7.meta": "405 curated entries",
+      "a7.li1": "The French edition of the AICFO core, for Francophone businesses and investors",
+      "a7.li2": "The same judgment framework: valuation, cash flow, risk detection, decision advice",
+      "a7.li3": "A consistent low-hallucination Q&A experience across languages",
+      "a7.scenep": "Business owners and finance leads in Francophone regions (Europe / Africa), cross-border investment communication, bilingual finance teams.",
+      "a7.link": "Open on ima: Matrice Modèles Fin. AICFO →",
+
+      "g.title": "User Guide",
+      "g.sub": "Four steps on ima — under a minute to get started.",
+      "g.st1t": "Open ima",
+      "g.st1p": "Go to ima.qq.com and sign in with WeChat",
+      "g.st2t": "Pick a knowledge base",
+      "g.st2p": "Click any agent link on this site to open its knowledge base",
+      "g.st3t": "Ask or upload",
+      "g.st3p": "Type your question, or upload Excel / PDF statements via the paperclip",
+      "g.st4t": "Follow up and share",
+      "g.st4p": "Read conclusion, reasoning and basis, then follow up or share",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      "g.boundline": "Decision support, not investment advice. Bad data in, bad conclusions out. The final call is always yours.",
+      "g.dl": "Download the AICFO User Manual (PDF) ⤓",
+
+      "kb.title": "Continuously Updated Knowledge Bases",
+      "kb.sub": "Six knowledge bases, 4,235 entries in total — regularly collected and archived, open for subscription on ima.",
+      "kb.ga": "Professional Content",
+      "kb.gb": "Mental Models",
+      "kb.a1p": "Finance, tax and business management, dismantled from a CFO's perspective.",
+      "kb.a1m": "916 articles",
+      "kb.a2p": "The business logic of the pharma industry, from a CFO's perspective.",
+      "kb.a2m": "479 articles",
+      "kb.a3p": "Use AI well — multiply your professional capability tenfold.",
+      "kb.a3m": "2620 articles",
+      "kb.b1p": "Mental models for cracking complex business logic.",
+      "kb.b1m": "33 articles",
+      "kb.b2p": "Building antifragility for companies and individuals in uncertain times.",
+      "kb.b2m": "111 articles",
+      "kb.b3p": "Borrowing Munger's wisdom to train CFO-style business judgment.",
+      "kb.b3m": "76 articles",
+      "kb.link": "Open on ima →",
+
+      "demo.title": "Demo",
+      "demo.sub": "A simulated conversation — see how the agent is asked and how it answers.",
+      "demo.badge": "Simulated demo",
+      "demo.play": "▶ Play demo",
+      "demo.replay": "↻ Replay",
+      "demo.note": "Example from the AICFO User Manual; the answer is a simulation, not a real conversation record",
+
+      "faq.title": "FAQ",
+      "faq.q1": "Will my financial data leak?",
+      "faq.a1": "Mask company names and amounts, and ask with anonymized cases. Before uploading a statement, strip fields that identify individuals — customer lists, ID numbers, bank account numbers.",
+      "faq.q2": "Could these answers be hallucinated by AI?",
+      "faq.a2": "Every knowledge base is curated and signed off by me; the model only retrieves and organises, it never adds facts. When data is missing it asks for it instead of guessing, and every figure-based conclusion states its basis and the data still needed.",
+      "faq.q3": "How is this different from asking a general-purpose LLM?",
+      "faq.a3": "It comes down to one thing: fix the caliber before doing the arithmetic. Change the caliber on the same numbers and the conclusion can flip — CASE 003 on this page is exactly that. General models tend to hand you a conclusion without first asking what your denominator is.",
+      "faq.q4": "Why do some agents produce reports while others only answer?",
+      "faq.a4": "It depends on how they are wired. Knowledge-base-only mode answers fast with low hallucination; with Skills / MCP attached it can generate PDF and Word reports and remember your preferences. Each agent's detail section states which it uses.",
+      "faq.q5": "Are these agents free?",
+      "faq.a5": "Yes, currently free — click the entry link in any card to start.",
+      "faq.q6": "Can you customize an agent for my industry?",
+      "faq.a6": "Yes. The core engine supports industry spin-offs — contact us below.",
+
+      "ct.title": "Contact & Collaboration",
+      "ct.sub": "Custom industry agents, internal-control diagnostics, speaking engagements — get in touch.",
+      "ct.wx": "WeChat",
+      "ct.wxp": "67757008",
+      "ct.mail": "Email",
+
+      "ft.copy": "© <span id=\"year\">2026</span> Shaoqi AICFO · Built on the ima platform",
+      "ft.top": "Back to top ↑",
+
+      demo: {
+        user: "We run a restaurant chain: RMB 120M annual revenue, 4% net margin. Should we open a 5th location? Conclude from payback and cash-flow angles.",
+        rows: [
+          { label: "Conclusion", tag: ["mid", "Review"], conclusion: true,
+            text: "Hold off on the 5th store — fix the unit economics of your existing stores before expanding." },
+          { label: "Reasoning",
+            text: "A 4% net margin sits below the healthy 8%–12% range for restaurant chains, so the single-store model isn't proven yet. New stores typically take 6–12 months to ramp up; expanding now dilutes both profit and cash." },
+          { label: "Basis",
+            text: "Annual net profit ≈ RMB 4.8M (120M × 4%). If a new store needs ~2M investment and loses ~80K/month during ramp-up, first-year cash tied up is ~3M — about 62% of yearly profit. Too little safety margin." },
+          { label: "Confidence", tag: ["mid", "Review"],
+            text: "Estimated from the two figures you provided. With per-store investment and monthly fixed costs, this conclusion can be upgraded to \"High\"." }
+        ]
+      }
+    }
+  };
+
+  var current = "zh";
+  try {
+    var saved = localStorage.getItem("site-lang");
+    if (saved === "en" || saved === "zh") current = saved;
+  } catch (e) {}
+
+  function t(key) {
+    var v = DICT[current][key];
+    return v === undefined ? key : v;
+  }
+
+  function applyLang() {
+    var dict = DICT[current];
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (dict[k] !== undefined) el.textContent = dict[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-html");
+      if (dict[k] !== undefined) el.innerHTML = dict[k];
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-alt");
+      if (dict[k] !== undefined) el.setAttribute("alt", dict[k]);
+    });
+
+    document.documentElement.lang = current === "zh" ? "zh-CN" : "en";
+    document.title = dict["meta.title"];
+    var meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", dict["meta.desc"]);
+
+    /* 页脚年份在 innerHTML 重写后需要重新填入 */
+    var yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+    /* 切换按钮状态 */
+    document.querySelectorAll("#langSwitch button").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === current);
+    });
+
+    document.dispatchEvent(new CustomEvent("site:langchange", { detail: { lang: current } }));
+  }
+
+  function setLang(lang) {
+    if (lang !== "zh" && lang !== "en") return;
+    current = lang;
+    try { localStorage.setItem("site-lang", lang); } catch (e) {}
+    applyLang();
+  }
+
+  var switchEl = document.getElementById("langSwitch");
+  if (switchEl) {
+    switchEl.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-lang]");
+      if (btn) setLang(btn.getAttribute("data-lang"));
+    });
+  }
+
+  window.SiteI18n = {
+    t: t,
+    getLang: function () { return current; },
+    setLang: setLang,
+    demo: function () { return DICT[current].demo; }
+  };
+
+  applyLang();
+})();
