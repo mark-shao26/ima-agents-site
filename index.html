@@ -7,16 +7,26 @@
 
 <title>AICFO AI财务总监｜企业财务决策与内控诊断</title>
 
+<!-- 访问统计：百度统计（异步加载，不阻塞渲染） -->
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?88f915b1b7a86f03c3cdf102ff0fa0cc";
+    var s = document.getElementsByTagName("script")[0];
+    if (s) { s.parentNode.insertBefore(hm, s); } else { document.head.appendChild(hm); }
+  })();
+</script>
 <link rel="canonical" href="https://mark-shao26.github.io/ima-agents-site/" />
   <link rel="stylesheet" href="css/style.css" />
   <!-- 网页字体：思源黑体 + Inter（jsDelivr 按需分包，加载失败自动回退系统字体） -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/600.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/600.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,7 +56,6 @@
           <li><a href="#overview" data-i18n="nav.overview">概览</a></li>
           <li><a href="#agents" data-i18n="nav.agents">智能体</a></li>
           <li><a href="cases.html" data-i18n="nav.cases">案例</a></li>
-          <li><a href="#experts" data-i18n="nav.experts">专家</a></li>
           <li><a href="#guide" data-i18n="nav.guide">使用指南</a></li>
           <li><a href="#knowledge" data-i18n="nav.knowledge">知识库</a></li>
           <li><a href="#demo" data-i18n="nav.demo">演示</a></li>
@@ -118,6 +127,8 @@
             <p data-i18n="sp.g3p">结论、口径、数字均已锁定；模型仅承担转述。</p>
           </div>
         </div>
+
+        <p class="evidence-cta"><a href="cases.html" data-i18n="sp.case">规则之外，看一个可复核的完整案例 →</a></p>
       </div>
     </section>
 
@@ -343,7 +354,7 @@
                     <h4 data-i18n="col.scene">适用场景</h4>
                     <p data-i18n="a6.scenep">拟上市 / 拟融资企业、集团内审部门、外部咨询机构。</p>
                     <h4 data-i18n="col.use">使用方式</h4>
-                    <p data-i18n="a6.linkp">分享链接即将上线，可先通过底部联系方式获取。</p>
+                    <p><a class="agent__link" href="#contact" data-i18n="a6.linkp">内测中 · 通过底部联系方式获取使用入口 →</a></p>
                   </div>
                 </div>
               </div>
@@ -464,6 +475,8 @@
             <span class="kb-card__foot"><span class="kb-card__meta" data-i18n="kb.b3m">收录 76 篇内容</span><span class="kb-card__arrow" aria-hidden="true">↗</span></span>
           </a>
         </div>
+
+        <p class="kb-note" data-i18n="kb.note">注：智能体详情中的「沉淀 N 条知识」为各智能体私有语料口径；上方 4,235 条为六个公开知识库条目，两者分属不同统计。</p>
       </div>
     </section>
 
@@ -574,6 +587,7 @@
     <div class="container site-footer__inner">
       <p data-i18n-html="ft.copy">© <span id="year">2026</span> 邵奇 AICFO · 基于 ima 平台构建</p>
       <a href="#top" data-i18n="ft.top">回到顶部 ↑</a>
+      <span class="ft-privacy">本站使用匿名访问统计 · Anonymous analytics</span>
     </div>
   </footer>
 

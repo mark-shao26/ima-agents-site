@@ -20,7 +20,7 @@
       "nav.menuClose": "关闭菜单",
 
       "hero.eyebrow": "基于 ima·copilot 的财、税、法、合规 AI Agent 矩阵",
-      "hero.title": "10 年 CFO 判断，<br />沉淀为<span class=\"accent\">可对话的智能体</span>",
+      "hero.title": "决策前的算账、验数、找风险，<br />交给<span class=\"accent\">一个有口径的 CFO</span>",
       "hero.lead": "不做通用问答，只做有口径的财务判断：按行业科目与报表建模，按「结论—解释—依据」作答，缺数据时向你求证、不作臆断。",
       "hero.btn1": "浏览全部智能体",
       "hero.btn2": "查看演示",
@@ -51,6 +51,7 @@
       "sp.g2p": "同一问题重复询问，结论一致——由结构保证，而非概率。",
       "sp.g3t": "闸门三 · 表达",
       "sp.g3p": "结论、口径、数字均已锁定；模型仅承担转述。",
+      "sp.case": "规则之外，看一个可复核的完整案例 →",
       "ag.role": "按角色找：",
       "ag.r1": "企业主",
       "ag.r2": "电商",
@@ -157,7 +158,7 @@
       "a6.li2": "风险分级与整改优先级建议",
       "a6.li3": "输出结构化诊断结论",
       "a6.scenep": "拟上市 / 拟融资企业、集团内审部门、外部咨询机构。",
-      "a6.linkp": "分享链接即将上线，可先通过底部联系方式获取。",
+      "a6.linkp": "内测中 · 通过底部联系方式获取使用入口 →",
 
       "a7.brief": "法语区版本",
       "a7.meta": "沉淀 405 条知识",
@@ -202,6 +203,7 @@
 
       "kb.title": "持续更新的知识库",
       "kb.sub": "六个知识库、累计 4,235 条内容，定期采集、持续归档，在 ima 上开放订阅。",
+      "kb.note": "注：智能体详情中的「沉淀 N 条知识」为各智能体私有语料口径；上方 4,235 条为六个公开知识库条目，两者分属不同统计。",
       "kb.ga": "专业内容库",
       "kb.gb": "思维模型库",
       "kb.a1p": "CFO 视角拆解财务、税务与经营管理",
@@ -277,7 +279,7 @@
       "nav.menuClose": "Close menu",
 
       "hero.eyebrow": "An AI Agent Matrix for Finance, Tax, Legal & Compliance on ima·copilot",
-      "hero.title": "A decade of CFO judgment,<br />distilled into <span class=\"accent\">conversational agents</span>",
+      "hero.title": "Decision math, fact checks, and risk scans —<br />handed to <span class=\"accent\">a CFO with a documented basis</span>",
       "hero.lead": "Not generic Q&A, but judgment grounded in your industry's accounts and reports: delivered as conclusion–reasoning–evidence, and it asks for missing data instead of guessing.",
       "hero.btn1": "Explore the Agents",
       "hero.btn2": "Watch the Demo",
@@ -308,6 +310,7 @@
       "sp.g2p": "Ask twice, get the same answer — by structure, not by probability.",
       "sp.g3t": "Gate 3 · Wording",
       "sp.g3p": "Conclusions, calibers and figures are locked; the model only conveys.",
+      "sp.case": "Beyond rules — see a fully verifiable case file →",
       "ag.role": "Find by role:",
       "ag.r1": "Business owner",
       "ag.r2": "E-commerce",
@@ -414,7 +417,7 @@
       "a6.li2": "Risk grading and remediation priorities",
       "a6.li3": "Structured diagnostic conclusions",
       "a6.scenep": "Pre-IPO / pre-financing companies, group internal audit, external advisors.",
-      "a6.linkp": "Share link coming soon — reach us via the contact section below.",
+      "a6.linkp": "Private beta — contact us below for access →",
 
       "a7.brief": "Francophone edition",
       "a7.meta": "405 curated entries",
@@ -459,6 +462,7 @@
 
       "kb.title": "Continuously Updated Knowledge Bases",
       "kb.sub": "Six knowledge bases, 4,235 entries in total — regularly collected and archived, open for subscription on ima.",
+      "kb.note": "Note: per-agent entry counts reflect each agent\u2019s private corpus; the 4,235 entries above cover the six public knowledge bases. The two figures are separate.",
       "kb.ga": "Professional Content",
       "kb.gb": "Mental Models",
       "kb.a1p": "Finance, tax and business management, dismantled from a CFO's perspective.",
